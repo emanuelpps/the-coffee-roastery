@@ -9,7 +9,12 @@ export default {
       'playfair': ['Playfair Display', 'serif'],
       'nunito': ['Nunito', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'background-intro': "url('./src/assets/img/background-intro.webp')",
+        'background-intro-mobile': "url('./src/assets/img/background-intro-mobile.webp')",
+      }
+    },
   },
   plugins: [],
 }
