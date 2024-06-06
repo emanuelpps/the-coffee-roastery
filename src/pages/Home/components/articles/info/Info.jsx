@@ -7,14 +7,16 @@ import coffeBeansSecondary from "../../../../../assets/img/coffe-beans-1.png";
 
 function Info() {
   return (
-    <div className="max-w-[360px] md:w-[100%] md:max-w-[100%] bg-[#ffebd6] text-playfair h-auto pb-40  container-snap">
+    <div className="flex flex-col max-w-[360px] md:w-[100%] md:max-w-[100%] bg-[#ffebd6] text-playfair h-auto pb-40  container-snap">
       <div className="flex flex-col justify-center items-center gap-10 pt-20 ml-20 mr-20 text-[#473429]">
-        <div className="flex flex-col justify-center items-center w-[500px] mt-20 mb-10 relative">
+        <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] mt-20 mb-10 relative">
           <img
             src={coffeBeanSecondary}
             className="hidden md:flex w-[50px] absolute right-[125%] top-[0%] rotate-[190deg]"
           />
-          <h2 className="font-[600] md:text-5xl pb-5">Explore Our Collection</h2>
+          <h2 className="font-[600] md:text-5xl pb-5">
+            Explore Our Collection
+          </h2>
           <p className="md:text-2xl text-center">
             Dive into our diverse range of coffee blends and single-origin
             selections. Each offering is a testament to our dedication to
@@ -46,12 +48,12 @@ function Info() {
           className="hidden md:flex w-[25%] absolute right-[5%] top-[145%] rotate-[140deg] blur-[4.5px]"
         />
       </div>
-      <div className="flex justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
         <img
           src={coffeBeanTerciary}
           className="hidden md:flex w-[10%] absolute left-[5%] top-[1%] rotate-[150deg] blur-[3px] z-50"
         />
-        <div className="flex flex-col justify-center items-center w-[500px] h-[200px] z-0 ">
+        <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] h-[200px] z-0 ">
           <h2 className="md:text-4xl pb-5">The Art of Roasting</h2>
           <p className="md:text-xl z-50">
             Roasting coffee is an art, and at The Coffee Roastery, we’ve
@@ -73,7 +75,7 @@ function Info() {
             className="hidden md:flex w-[30%] absolute right-[90%] top-[85%]  rotate-[170deg] blur-[4px] z-50"
           />
         </div>
-        <div className="flex flex-col w-[500px] h-[200px] relative">
+        <div className="flex flex-col w-[330px] md:w-[500px] h-[200px] relative">
           <h2 className="md:text-4xl pb-5">Freshness You Can Taste</h2>
           <p className="md:text-xl z-50">
             We roast our beans in small batches to maintain their freshness and
@@ -87,8 +89,8 @@ function Info() {
           />
         </div>
       </div>
-      <div className="flex justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
-        <div className="flex flex-col w-[500px] h-[200px]">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
+        <div className="flex flex-col w-[330px] md:w-[500px] h-[200px]">
           <h2 className="md:text-4xl pb-5">Brewed to Perfection</h2>
           <p className="md:text-xl">
             Whether you’re a seasoned barista or a coffee enthusiast, our beans
@@ -101,7 +103,7 @@ function Info() {
           src={coffeBeanSecondary}
           className="hidden md:flex w-[30px] absolute left-[70%] z-0 top-[115%] rotate-[250deg]"
         />
-        <div className="flex flex-col w-[500px] h-[200px]">
+        <div className="flex flex-col w-[330px] md:w-[500px] h-[200px]">
           <h2 className="md:text-4xl pb-5 z-50 text-pretty">
             A Coffee Experience
           </h2>

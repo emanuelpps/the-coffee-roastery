@@ -1,23 +1,14 @@
-import coffeBackground from "../../../../../assets/img/table-coffe-background.webp";
 import Buttons from "../../../../../components/Buttons/Buttons";
 
 function FamilyRoasters() {
   return (
-    <div
-      className="flex justify-center items-center w-full h-screen bg-cover bg-center bg-no-repeat text-[#ffebd6]"
-      style={{
-        backgroundImage: `url(${coffeBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="flex flex-col justify-start items-start gap-10 p-20 w-full">
-        <div className="flex flex-col text-start w-[50%]">
-          <h2 className="font-[400] text-5xl pt-10 pb-5">
+    <div className="flex justify-center items-center w-full h-screen bg-cover md:bg-center bg-bottom bg-no-repeat text-[#ffebd6] bg-background-family-roasters-mobile md:bg-background-family-roasters">
+      <div className="flex flex-col md:pt-none justify-center items-start gap-10 p-20 w-full">
+        <div className="flex flex-col text-start w-[100%] md:w-[50%]">
+          <h2 className="font-[400] text-2xl md:text-5xl md:pt-10 md:pb-5">
             Join the Coffee Roastery Family
           </h2>
-          <p className="text-xl">
+          <p className="md:text-xl">
             At The Coffee Roastery, we don&apos;t just brew coffee; we cultivate
             a community of passionate coffee enthusiasts. When you join our
             family, you become part of a tradition that values excellence,
