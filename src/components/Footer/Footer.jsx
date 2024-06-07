@@ -7,7 +7,7 @@ function Footer() {
         <hr className=" justify-center items-center max-auto h-px my-0 border-0 dark:bg-[#473429] w-[90%]" />
         <div
           id="footer-info"
-          className="flex justify-center items-center gap-80 pt-10"
+          className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-80 pt-10"
         >
           <div className="flex flex-col justify-center items-center ">
             <h2 className="text-2xl text-center">Shop</h2>
@@ -36,7 +36,7 @@ function Footer() {
             <p className="text-xl text-center mb-2">+1 (890) 028-0779</p>
           </div>
         </div>
-        <div className="flex w-[90%] justify-between pt-10 pb-5">
+        <div className="flex flex-col md:flex-row justify-center items-center w-[90%] md:justify-between pt-10 pb-5">
           <div>
             <h3>Copyright © 2024 – Emanuel Pagés </h3>
           </div>

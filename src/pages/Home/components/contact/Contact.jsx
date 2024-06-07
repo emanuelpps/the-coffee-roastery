@@ -3,12 +3,12 @@ import Buttons from "../../../../components/Buttons/Buttons";
 function Contact() {
   return (
     <div className="bg-[#ffebd6] text-playfair h-full pb-20">
-      <div className="flex justify-center items-center pt-20 text-[#473429]  w-full">
-        <div className="flex justify-center items-center w-[100%]">
+      <div className="flex justify-center items-center pt-20 text-[#473429] w-full">
+        <div className="flex flex-col md:flex-row justify-center items-center w-[100%]">
           <div className="flex justify-center items-center w-[50%]">
-            <img src={formImage} className="w-[500px]" />
+            <img src={formImage} className="hidden md:flex md:w-[500px]" />
           </div>
-          <div className="flex justify-center items-center w-[50%] mr-20">
+          <div className="flex justify-center items-center w-[90%] md:w-[50%] md:mr-20">
             <form className="w-full">
               <div className="mb-5">
                 <label

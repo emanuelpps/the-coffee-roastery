@@ -8,7 +8,7 @@ import Intro from "./components/intro/Intro";
 
 function Home() {
   return (
-    <div className="font-playfair">
+    <div className="overflow-x-hidden font-playfair">
       <Intro />
       <Info />
       <FamilyRoasters />

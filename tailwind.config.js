@@ -15,6 +15,8 @@ export default {
           "url(./src/assets/img/table-coffe-background.webp)",
         "background-family-roasters-mobile":
           "url(./src/assets/img/close-up-coffee.webp)",
+          "background-about-us": "url(./src/assets/img/tool-used-coffee-2.webp)",
+          "background-about-us-mobile": "url(./src/assets/img/about-us-background.webp)",
       },
     },
   },

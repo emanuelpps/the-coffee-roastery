@@ -3,8 +3,8 @@ import Buttons from "../../../../../components/Buttons/Buttons";
 function FamilyRoasters() {
   return (
     <div className="flex justify-center items-center w-full h-screen bg-cover md:bg-center bg-bottom bg-no-repeat text-[#ffebd6] bg-background-family-roasters-mobile md:bg-background-family-roasters">
-      <div className="flex flex-col md:pt-none justify-center items-start gap-10 p-20 w-full">
-        <div className="flex flex-col text-start w-[100%] md:w-[50%]">
+      <div className="flex flex-col md:pt-none justify-center items-start gap-10 md:p-20  w-[90%] md:w-full">
+        <div className="flex flex-col text-start mt-40 md:mt-0 w-[100%] md:w-[50%]">
           <h2 className="font-[400] text-2xl md:text-5xl md:pt-10 md:pb-5">
             Join the Coffee Roastery Family
           </h2>
