@@ -12,3 +12,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.text-stroke-3 {
+  text-shadow: -1px -1px 0 rgb(173, 37, 37), 1px -1px 0 rgb(151, 24, 24), -1px 1px 0 rgb(116, 8, 8), 1rgb(145, 12, 12)x 0 rgb(219, 5, 5);
+}
