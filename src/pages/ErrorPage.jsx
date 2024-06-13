@@ -3,9 +3,9 @@ import Buttons from "../components/Buttons/Buttons";
 
 function ErrorPage() {
   return (
-    <div className="bg-background-error-page h-screen bg-cover bg-right bg-no-repeat text-white">
+    <div className="bg-background-error-page h-screen bg-cover bg-right bg-no-repeat text-white ">
       <div className="flex flex-col justify-center items-end h-[100%] w-[screen] mr-40">
-        <h1 className="flex font-[500] text-[3rem] font-playfair  md:text-[75px] ">
+        <h1 className="flex md:font-[500] text-[2rem] font-playfair  md:text-[75px] ">
           In Development...
         </h1>
         <Link to="/">
