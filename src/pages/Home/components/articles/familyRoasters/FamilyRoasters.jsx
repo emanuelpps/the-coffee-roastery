@@ -1,4 +1,5 @@
 import Buttons from "../../../../../components/Buttons/Buttons";
+import { Link } from "react-router-dom";
 
 function FamilyRoasters() {
   return (
@@ -16,9 +17,9 @@ function FamilyRoasters() {
             bean.
           </p>
         </div>
-        <div className="mt-2 flex justify-scenter items-center mr-5">
+        <Link to={"/rent"} className="mt-2 flex justify-scenter items-center mr-5">
           <Buttons variant="primary" label="Join Now"></Buttons>
-        </div>
+        </Link>
       </div>
     </div>
   );

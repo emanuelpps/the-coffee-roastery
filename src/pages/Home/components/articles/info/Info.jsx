@@ -4,6 +4,7 @@ import coffeBeanSecondary from "../../../../../assets/img/coffe-bean-2.png";
 import coffeBeans from "../../../../../assets/img/coffe-beans.png";
 import coffeBeanTerciary from "../../../../../assets/img/coffe-bean-3.png";
 import coffeBeansSecondary from "../../../../../assets/img/coffe-beans-1.png";
+import { Link } from "react-router-dom";
 
 function Info() {
   return (
@@ -23,9 +24,9 @@ function Info() {
             providing you with the best coffee experience possible. From smooth
             and mellow to dark and robust, there&apos;s something for everyone.
           </p>
-          <div className="mt-5">
+          <Link to={"/shop"} className="mt-5">
             <Buttons variant="secondary" label="Shop Now"></Buttons>
-          </div>
+          </Link>
           <img
             src={coffeBeanPrimary}
             className="hidden md:flex w-[30px] absolute right-[120%]"

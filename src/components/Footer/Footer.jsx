@@ -15,7 +15,7 @@ function Footer() {
             <Link to="/shop" className="text-xl text-center mb-2">
               Shop Now
             </Link>
-            <Link to="/shop" className="text-xl text-center mb-2">
+            <Link to="/rent" className="text-xl text-center mb-2">
               Rent Machine
             </Link>
           </div>

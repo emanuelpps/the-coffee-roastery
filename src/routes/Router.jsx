@@ -31,10 +31,14 @@ const router = createBrowserRouter([
         element: <ErrorPage />,
       },
       {
+        path: "/:id",
+        element: <ErrorPage />,
+      },
+      {
         path: "/*",
         element: <NotFound />,
       },
-    ]
+    ],
   },
 ]);
 
@@ -43,4 +47,3 @@ const Router = () => {
 };
 
 export default Router;
-
