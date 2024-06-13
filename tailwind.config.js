@@ -19,6 +19,8 @@ export default {
           "url(/assets/img/tool-used-coffee-2.webp)",
         "background-about-us-mobile":
           "url(/assets/img/about-us-background.webp)",
+          "background-error-page":
+            "url(/assets/img/roasted-coffee-error-bg.webp)",
       },
     },
   },
