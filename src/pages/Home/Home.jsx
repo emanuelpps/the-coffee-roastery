@@ -1,4 +1,5 @@
 //import BannersContainer from "./components/articles/bannersContainer/BannersContainer";
+import DevelopBanner from "../../components/developmentBanner/DevelopBanner";
 import About from "./components/about/About";
 import FamilyRoasters from "./components/articles/familyRoasters/FamilyRoasters";
 import Info from "./components/articles/info/Info";
@@ -9,6 +10,7 @@ import Intro from "./components/intro/Intro";
 function Home() {
   return (
     <div className="overflow-x-hidden font-playfair">
+      <DevelopBanner />
       <Intro />
       <Info />
       <FamilyRoasters />
