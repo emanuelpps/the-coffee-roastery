@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Buttons from "../../Buttons/Buttons";
+import { FaStar } from "react-icons/fa";
 
 function ProductCard({ ...product }) {
   return (
@@ -18,6 +19,13 @@ function ProductCard({ ...product }) {
           <div id="product-card-description">
             <div id="product-card-title">
               <h2 className="text-2xl">{product.name}</h2>
+              <div
+                id="product-card-rating"
+                className="flex justify-start items-center gap-2"
+              >
+                <FaStar />
+                {product.rating}
+              </div>
             </div>
             <div id="product-card-price">
               <h3 className="text-xl">${product.price}</h3>
