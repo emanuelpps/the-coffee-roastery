@@ -1,14 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 
 function MenuDesktop() {
+  const currentLocation = useLocation();
+
   return (
     <div
       id="navbar"
-      className="bg-transparent w-full justify-center flex absolute text-white top-5"
+      className={`bg-transparent w-full justify-center flex absolute ${
+        currentLocation.pathname === "/shop" ? "text-[#473429]" : "text-white"
+      } top-5`}
     >
       <div id="navbar-business" className="flex justify-end gap-10 font-nunito">
-        <Link to="/" className="text-[1.2rem] font-semibold hover:text-[#d3cecc]">
+        <Link
+          to="/"
+          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+        >
           Home
         </Link>
         <Link
@@ -27,7 +34,10 @@ function MenuDesktop() {
       <div id="navbar-logo" className="flex h-[fit-content] w-[600px]">
         <Logo />
       </div>
-      <div id="navbar-ecommerce" className="flex justify-end gap-10 font-nunito">
+      <div
+        id="navbar-ecommerce"
+        className="flex justify-end gap-10 font-nunito"
+      >
         <Link
           to={"/shop"}
           className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"

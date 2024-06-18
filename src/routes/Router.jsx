@@ -3,6 +3,9 @@ import Root from "./Root/Root";
 import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage";
 import NotFound from "../pages/NotFound";
+//import RentDetail from "../components/RentCard/RentDetail";
+import Rent from "../pages/Rent/Rent";
+import ShopNow from "../pages/Shop/ShopNow";
 
 const router = createBrowserRouter([
   {
@@ -24,11 +27,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <ErrorPage />,
+        element: <ShopNow />,
+        elementError: <ErrorPage />,
       },
       {
         path: "/rent",
-        element: <ErrorPage />,
+        element: <Rent />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/:id",
