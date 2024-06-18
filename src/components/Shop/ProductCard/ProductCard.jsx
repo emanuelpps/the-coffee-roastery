@@ -13,7 +13,7 @@ function ProductCard({ ...product }) {
           id="product-card"
           className="flex flex-wrap justify-center items-center p-5 gap-10 w-full"
         >
-          <div className="">
+          <div className="border-solid border-4 border-[#473429]">
             <img src={product.image} className="w-[300px]" />
           </div>
           <div id="product-card-description">
