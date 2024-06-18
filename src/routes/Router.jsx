@@ -6,6 +6,7 @@ import NotFound from "../pages/NotFound";
 //import RentDetail from "../components/RentCard/RentDetail";
 import Rent from "../pages/Rent/Rent";
 import ShopNow from "../pages/Shop/ShopNow";
+import ProductDetail from "../components/Shop/ProductDetail/ProductDetail";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,9 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: "/:id",
-        element: <ErrorPage />,
+        path: "/shop/:id",
+        element: <ProductDetail />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/*",

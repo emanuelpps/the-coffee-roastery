@@ -41,7 +41,9 @@ function Footer() {
             <h3>Copyright © 2024 – Emanuel Pagés </h3>
           </div>
           <div>
-            <h3>See other projects</h3>
+            <Link to="https://emanuelp-portfolio.vercel.app" target="_blank">
+              <h3>See other projects</h3>
+            </Link>
           </div>
         </div>
       </div>

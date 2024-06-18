@@ -1,10 +1,15 @@
 import LogoIcon from "./LogoIcon";
 import CoffeBean from "/assets/img/coffi-bean.svg";
 import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 function Logo() {
+  const { id } = useParams();
   const currentLocation = useLocation();
   const fillColor =
-    currentLocation.pathname === "/shop" ? "#473429" : "#FFEBD6";
+    currentLocation.pathname === "/shop" ||
+    currentLocation.pathname === `/shop/${id}`
+      ? "#473429"
+      : "#FFEBD6";
   return (
     <div className="flex flex-col gap-2 w-full justify-center items-center font-playfair">
       <div className="flex flex-col justify-center leading-none">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Buttons from "../../Buttons/Buttons";
 
 function ProductCard({ ...product }) {
@@ -22,7 +23,11 @@ function ProductCard({ ...product }) {
               <h3 className="text-xl">${product.price}</h3>
             </div>
             <div id="product-card-button" className="pt-10">
-              <Buttons variant="secondary" label="View More"></Buttons>
+              <Link
+                to={{ pathname: `/shop/${product.id}`, state: { product } }}
+              >
+                <Buttons variant="secondary" label="View More"></Buttons>
+              </Link>
             </div>
           </div>
         </div>

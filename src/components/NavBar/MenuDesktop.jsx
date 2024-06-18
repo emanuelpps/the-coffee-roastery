@@ -1,14 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
+import { useParams } from "react-router-dom";
 
 function MenuDesktop() {
+  const { id } = useParams();
   const currentLocation = useLocation();
 
   return (
     <div
       id="navbar"
       className={`bg-transparent w-full justify-center flex absolute ${
-        currentLocation.pathname === "/shop" ? "text-[#473429]" : "text-white"
+        currentLocation.pathname === "/shop" ||
+        currentLocation.pathname === `/shop/${id}`
+          ? "text-[#473429]"
+          : "text-white"
       } top-5`}
     >
       <div id="navbar-business" className="flex justify-end gap-10 font-nunito">
