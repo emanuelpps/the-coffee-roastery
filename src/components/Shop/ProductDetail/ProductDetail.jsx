@@ -9,20 +9,6 @@ function ProductDetail() {
   const [productsFiltered, setProductsFiltered] = useState({});
   const { id } = useParams();
 
-  {
-    /*
-    "id": 5,
-    "image": "/assets/img/arabic-coffee.jpg",
-    "name": "Arabic Coffee",
-    "processing": "sun",
-    "region": "India",
-    "roast": "dark",
-    "description": "Arabic Coffee is known for its unique preparation method and rich, spicy flavor profile.",
-    "roast_description": "Dark roasts have a robust, full-bodied flavor with a hint of bitterness, ideal for those who enjoy strong coffee.",
-    "price": 16.49,
-    "rating": 4.8
-  */
-  }
   useEffect(() => {
     const selectedProducts = products.find(
       (product) => product.id === parseInt(id)
@@ -34,14 +20,14 @@ function ProductDetail() {
   return (
     <div
       id="product-detail"
-      className="flex flex-col justify-center items-center pt-40 bg-[#FFEBD6] w-[100%] m-auto"
+      className="flex flex-col justify-center items-center pt-40 bg-[#FFEBD6] w-[100%] m-auto overflow-x-hidden"
     >
       <div id="product-detail-container" className="flex  w-[90%] gap-20">
         <div
           id="product-detail-image"
           className="border-solid border-4 border-[#473429]"
         >
-          <img src={productsFiltered.image} className="w-[600px]" />
+          <img src={productsFiltered.image} className="w-[700px]" />
         </div>
         <div
           id="product-detail-description"
@@ -72,8 +58,11 @@ function ProductDetail() {
           </div>
         </div>
       </div>
-      <div id="detail-buttons" className="flex pt-10 gap-10">
-        <Link to="/shop" >
+      <div
+        id="detail-buttons"
+        className="flex w-full pt-10 gap-10 justify-center items-center ml-96"
+      >
+        <Link to="/shop">
           <Buttons variant="secondary" label="Go Back"></Buttons>
         </Link>
         <Buttons variant="secondary" label="Buy"></Buttons>
