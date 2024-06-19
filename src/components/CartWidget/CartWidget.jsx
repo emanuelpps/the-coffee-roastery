@@ -15,7 +15,7 @@ function CartWidget() {
       <Link
         to="/cart"
         id="cart-widget-container"
-        className="bg-[#473429]  hover:bg-[#FFEBD6]  rounded-full p-5  fixed bottom-5 right-5"
+        className={`bg-[#473429]  hover:bg-[#FFEBD6]  rounded-full p-5  fixed bottom-5 right-5 border-2 ${hoverState ? "border-[#473429]" : "border-[#FFEBD6]"}`}
         onMouseEnter={() => setHoverState(true)}
         onMouseLeave={() => setHoverState(false)}
       >
