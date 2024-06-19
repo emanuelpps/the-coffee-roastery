@@ -7,6 +7,7 @@ import NotFound from "../pages/NotFound";
 import Rent from "../pages/Rent/Rent";
 import ShopNow from "../pages/Shop/ShopNow";
 import ProductDetail from "../components/Shop/ProductDetail/ProductDetail";
+import Cart from "../pages/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <ErrorPage />,
+        element: <Cart />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/*",

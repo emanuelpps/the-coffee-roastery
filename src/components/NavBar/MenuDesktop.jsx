@@ -11,7 +11,8 @@ function MenuDesktop() {
       id="navbar"
       className={`bg-transparent w-full justify-center flex absolute ${
         currentLocation.pathname === "/shop" ||
-        currentLocation.pathname === `/shop/${id}`
+        currentLocation.pathname === `/shop/${id}` ||
+        currentLocation.pathname === "/cart"
           ? "text-[#473429]"
           : "text-white"
       } top-5`}
