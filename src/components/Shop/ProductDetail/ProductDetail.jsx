@@ -4,8 +4,11 @@ import products from "../../../../public/assets/data/products.json";
 import { FaStar } from "react-icons/fa";
 import Buttons from "../../Buttons/Buttons";
 import { Link } from "react-router-dom";
+import useCartStore from "../../../store/CartStore";
 
 function ProductDetail() {
+  const addToCart = useCartStore((state) => state.addToCart);
+  const cart = useCartStore((state) => state.cart);
   const [productsFiltered, setProductsFiltered] = useState({});
   const { id } = useParams();
 
@@ -16,6 +19,13 @@ function ProductDetail() {
 
     setProductsFiltered(selectedProducts);
   }, [id]);
+
+  const handleBuy = (productsFiltered) => {
+    addToCart(productsFiltered);
+  };
+
+  console.log("filtered", productsFiltered);
+  console.log("cart", cart);
 
   return (
     <div
@@ -65,7 +75,9 @@ function ProductDetail() {
         <Link to="/shop">
           <Buttons variant="secondary" label="Go Back"></Buttons>
         </Link>
-        <Buttons variant="secondary" label="Buy"></Buttons>
+        <div onClick={() => handleBuy(productsFiltered)}>
+          <Buttons variant="secondary" label="Buy"></Buttons>
+        </div>
       </div>
     </div>
   );
