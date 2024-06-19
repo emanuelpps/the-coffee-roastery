@@ -14,7 +14,7 @@ function MenuDesktop() {
         currentLocation.pathname === `/shop/${id}` ||
         currentLocation.pathname === "/cart"
           ? "text-[#473429]"
-          : "text-white"
+          : "text-[#FFEBD6]"
       } top-5`}
     >
       <div id="navbar-business" className="flex justify-end gap-10 font-nunito">
