@@ -42,6 +42,10 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
+        path: "/cart",
+        element: <ErrorPage />,
+      },
+      {
         path: "/*",
         element: <NotFound />,
       },

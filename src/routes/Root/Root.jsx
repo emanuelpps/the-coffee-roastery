@@ -1,3 +1,4 @@
+import CartWidget from "../../components/CartWidget/CartWidget";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import { Outlet, ScrollRestoration } from "react-router-dom";
@@ -8,6 +9,7 @@ function Root() {
       <NavBar />
       <Outlet />
       <ScrollRestoration />
+      <CartWidget />
       <Footer />
     </div>
   );
