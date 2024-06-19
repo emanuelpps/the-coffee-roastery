@@ -14,9 +14,9 @@ function NewRelease() {
         >
           <div
             id="new-release-image-border-2"
-            className={`border-[#473429] border-4  ${showMore && "opacity-25"}`}
+            className={`border-[#473429] border-4  ${showMore && "opacity-25"} rounded-xl`}
           >
-            <img src={newReleaseImg} className="w-[200px] md:w-[1000px]" />
+            <img src={newReleaseImg} className="w-[200px] md:w-[1000px] rounded-md" />
           </div>
           {showMore && (
             <Link to="/shop/10" className="absolute w-40 h-32 m-auto left-0 right-0 top-10 bottom-0">

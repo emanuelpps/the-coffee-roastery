@@ -21,11 +21,11 @@ function RentDetail({ ...machine }) {
                 id="rent-detail-image-selected"
                 className="flex justify-center items-center pb-10"
               >
-                <div>
+                <div className="rounded-xl">
                   <img
                     src={imageSelected ? imageSelected : machine.images[0]}
                     width={"400px"}
-                    className="border-black border-4 "
+                    className="border-black border-4 rounded-md"
                   />
                 </div>
               </div>

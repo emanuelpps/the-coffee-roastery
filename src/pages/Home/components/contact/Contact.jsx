@@ -6,7 +6,7 @@ function Contact() {
       <div className="flex justify-center items-center pt-20 text-[#473429] w-full">
         <div className="flex flex-col md:flex-row justify-center items-center w-[100%]">
           <div className="flex justify-center items-center w-[50%]">
-            <img src={formImage} className="hidden md:flex md:w-[500px]" />
+            <img src={formImage} className="hidden md:flex md:w-[500px] rounded-xl" />
           </div>
           <div className="flex justify-center items-center w-[90%] md:w-[50%] md:mr-20">
             <form className="w-full">
