@@ -20,7 +20,7 @@ function MenuDesktop() {
       <div id="navbar-business" className="flex justify-end gap-10 font-nunito">
         <Link
           to="/"
-          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+          className={`text-[1.2rem] font-semibold hover:text-[#F7EADD]`}
         >
           Home
         </Link>

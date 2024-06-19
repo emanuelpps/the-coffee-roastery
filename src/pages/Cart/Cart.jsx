@@ -16,7 +16,7 @@ function Cart() {
         <div id="cart-title" className="w-full pt-10 pb-4">
           <h1 className="text-2xl">Your Cart:</h1>
         </div>
-        <div id="cart-content" className="w-full h-[100%] bg-[#cfb190] border-solid border-4 border-[#473429]">
+        <div id="cart-content" className="w-full h-[100%] bg-[#cfb190] border-solid border-4 border-[#473429] rounded-md">
           {cart.map((product) => (
             <CartProductCard
               key={product.id}
