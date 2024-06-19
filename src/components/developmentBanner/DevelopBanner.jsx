@@ -5,7 +5,7 @@ function DevelopBanner() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBanner(false);
-    }, 5500);
+    }, 6000);
     return () => clearTimeout(timer);
   }, []);
   return (
@@ -13,7 +13,7 @@ function DevelopBanner() {
       {showBanner && (
         <div className="w-full relative">
           <div className="flex w-full absolute justify-center items-center bg-black text-white">
-            <h2>This site is under development 👷‍♂️🛠️</h2>
+            <h2>WARNING! ⚠️ This site is under development 👷‍♂️🛠️</h2>
           </div>
         </div>
       )}

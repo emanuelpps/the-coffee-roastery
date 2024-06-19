@@ -13,20 +13,31 @@ function Cart() {
         id="cart-container"
         className="flex flex-col justify-center items-center w-[80%] h-full"
       >
-        <div id="cart-title" className="w-full pt-10 pb-4">
-          <h1 className="text-2xl">Your Cart:</h1>
-        </div>
-        <div id="cart-content" className="w-full h-[100%] bg-[#cfb190] border-solid border-4 border-[#473429] rounded-md">
-          {cart.map((product) => (
-            <CartProductCard
-              key={product.id}
-              product={product}
-              cart={cart}
-              removeFromCart={removeFromCart}
-              addToCart={addToCart}
-            />
-          ))}
-        </div>
+        {cart.length > 0 ? (
+          <>
+            <div id="cart-title" className="w-full pt-10 pb-4">
+              <h1 className="text-2xl">Your Cart:</h1>
+            </div>
+            <div
+              id="cart-content"
+              className="w-full h-[100%] bg-[#cfb190] border-solid border-4 border-[#473429] rounded-md"
+            >
+              {cart.map((product) => (
+                <CartProductCard
+                  key={product.id}
+                  product={product}
+                  cart={cart}
+                  removeFromCart={removeFromCart}
+                  addToCart={addToCart}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="h-screen flex justify-center mt-10">
+            <p className="text-2xl">Your Cart is Empty...</p>
+          </div>
+        )}
       </div>
     </div>
   );
