@@ -1,4 +1,4 @@
-function CartProductCard({ product, addToCart, removeFromCart }) {
+function CartProductCard({ product, addToCart, removeFromCart, cart }) {
   return (
     <div id="cart-product-card">
       <div
@@ -36,7 +36,9 @@ function CartProductCard({ product, addToCart, removeFromCart }) {
                 <button className="text-4xl">-</button>
               </div>
               <div id="cart-product-card-quantity">
-                <span>1</span>
+                <span>
+                  {cart.filter((item) => item.id === product.id).length}
+                </span>
               </div>
               <div id="cart-product-card-button-add">
                 <button className="text-4xl">+</button>

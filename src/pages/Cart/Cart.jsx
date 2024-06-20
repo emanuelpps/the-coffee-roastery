@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useCartStore from "../../store/CartStore";
 import CartProductCard from "../../components/Shop/ProductCard/CartProductCard";
 
 function Cart() {
+  const [newCart, setNewCart] = useState([]);
   const { cart, removeFromCart, addToCart } = useCartStore();
+
   return (
     <div
       id="cart"
@@ -22,15 +24,17 @@ function Cart() {
               id="cart-content"
               className="w-full h-[100%] bg-[#cfb190] border-solid border-4 border-[#473429] rounded-md"
             >
-              {cart.map((product) => (
-                <CartProductCard
-                  key={product.id}
-                  product={product}
-                  cart={cart}
-                  removeFromCart={removeFromCart}
-                  addToCart={addToCart}
-                />
-              ))}
+              {cart
+                .filter((value, index) => cart.indexOf(value) === index)
+                .map((product) => (
+                  <CartProductCard
+                    key={product.id}
+                    product={product}
+                    cart={cart}
+                    removeFromCart={removeFromCart}
+                    addToCart={addToCart}
+                  />
+                ))}
             </div>
           </>
         ) : (
