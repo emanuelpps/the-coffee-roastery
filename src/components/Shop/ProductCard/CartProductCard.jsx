@@ -1,3 +1,6 @@
+import { IoMdAddCircle } from "react-icons/io";
+import { IoIosRemoveCircle } from "react-icons/io";
+import { IoIosTrash } from "react-icons/io";
 function CartProductCard({ product, addToCart, removeFromCart, cart }) {
   return (
     <div id="cart-product-card">
@@ -33,15 +36,33 @@ function CartProductCard({ product, addToCart, removeFromCart, cart }) {
                 <h2>${product.price}</h2>
               </div>
               <div id="cart-product-card-button-reduce">
-                <button className="text-4xl">-</button>
+                <button
+                  className="text-4xl"
+                  //onClick={() => removeFromCart(product.id)}
+                >
+                  <IoIosRemoveCircle />
+                </button>
               </div>
               <div id="cart-product-card-quantity">
-                <span>
+                <span className="bg-white p-4 rounded-md">
                   {cart.filter((item) => item.id === product.id).length}
                 </span>
               </div>
               <div id="cart-product-card-button-add">
-                <button className="text-4xl">+</button>
+                <button className="text-4xl" onClick={() => addToCart(product)}>
+                  <IoMdAddCircle />
+                </button>
+              </div>
+              <div
+                id="remove-button"
+                className="flex justify-center items-center"
+              >
+                <button
+                  className="flex justify-center items-center text-xl"
+                  onClick={() => removeFromCart(product.id)}
+                >
+                  <IoIosTrash className="text-[#863333]" />
+                </button>
               </div>
             </div>
           </div>
