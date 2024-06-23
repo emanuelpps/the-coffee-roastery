@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import Buttons from "../Buttons/Buttons";
-function RentDetail({ ...machine }) {
+function RentDetail({ ...machine }, setShowModal) {
   const [imageSelected, setImageSelected] = useState();
   return (
     <div id="rent-detail" className="bg-[#473429] pt-20">
@@ -55,8 +55,12 @@ function RentDetail({ ...machine }) {
               <div>
                 <p className="md:text-xl">{machine.description}</p>
               </div>
-              <div id="rent-detail-button" className="pt-10">
-                <Buttons variant="primary" label="Rent Now"></Buttons>
+              <div id="rent-detail-button" className="pt-10" 
+                  onClick={() => setShowModal(true)}>
+                <Buttons
+                  variant="primary"
+                  label="Rent Now"
+                ></Buttons>
               </div>
             </div>
           </div>
