@@ -53,7 +53,7 @@ function CartProductCard({
                 </button>
               </div>
               <div id="cart-product-card-quantity">
-                <span className="bg-white p-4 rounded-md">
+                <span className="bg-[#CFB190] p-4 rounded-md">
                   {cart.filter((item) => item.id === product.id).length}
                 </span>
               </div>

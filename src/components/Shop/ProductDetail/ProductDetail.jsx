@@ -36,7 +36,10 @@ function ProductDetail() {
         id="product-detail-container"
         className="flex  w-[90%] gap-20 bg-[#F7EADD] p-20 rounded-md border-[#473429] border-2"
       >
-        <div id="product-detail-image" className="flex justify-center items-center">
+        <div
+          id="product-detail-image"
+          className="flex justify-center items-center"
+        >
           <img
             src={productsFiltered.image}
             className="w-[700px] h-[430px] border-solid rounded-xl border-4 border-[#473429]"
@@ -46,11 +49,15 @@ function ProductDetail() {
           id="product-detail-description"
           className="flex flex-col w-[50%] gap-5 "
         >
-          <h3 className="text-3xl pb-2  border-b-[1px] border-[#473429]">
-            {productsFiltered.name}
-          </h3>
+          <div className="flex items-center justify-between border-b-2 border-[#473429] pb-4">
+            <h3 className="text-3xl pb-2  ">{productsFiltered.name}</h3>
+            <div onClick={() => handleBuy(productsFiltered)}>
+              <Buttons variant="secondary" label="Add To Cart +"></Buttons>
+            </div>
+          </div>
           <span className="flex gap-5 text-xl">
-            Price:<p className="text-xl font-bold"> $ {productsFiltered.price}</p>
+            Price:
+            <p className="text-xl font-bold"> $ {productsFiltered.price}</p>
           </span>
           <span className="flex gap-5 text-xl">
             Weight:<p className="text-xl font-semibold"> 12 OZ</p>
@@ -86,9 +93,6 @@ function ProductDetail() {
         <Link to="/shop">
           <Buttons variant="secondary" label="Go Back"></Buttons>
         </Link>
-        <div onClick={() => handleBuy(productsFiltered)}>
-          <Buttons variant="secondary" label="Add To Cart"></Buttons>
-        </div>
       </div>
     </div>
   );
