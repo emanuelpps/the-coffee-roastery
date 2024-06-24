@@ -24,7 +24,7 @@ function ProductCard({ ...product }) {
             </div>
           </div>
           <div id="product-card-description" className="flex flex-col gap-2">
-            <div className="flex justify-between items-center gap-10">
+            <div className="flex justify-between items-center gap-10 border-b-2 border-[#473429] pb-5">
               <div id="product-card-title" className="w-full flex-nowrap">
                 <h2 className="text-2xl w-[fit-content]">{product.name}</h2>
               </div>
@@ -34,7 +34,7 @@ function ProductCard({ ...product }) {
             </div>
             <div
               id="product-card-button"
-              className="flex justify-center items-center pt-10 pb-10"
+              className="flex justify-center items-center pt-5 pb-10"
             >
               <Link
                 to={{ pathname: `/shop/${product.id}`, state: { product } }}
