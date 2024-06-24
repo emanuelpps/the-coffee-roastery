@@ -20,19 +20,37 @@ function MenuDesktop() {
       <div id="navbar-business" className="flex justify-end gap-10 font-nunito">
         <Link
           to="/"
-          className={`text-[1.2rem] font-semibold hover:text-[#F7EADD]`}
+          className={`text-[1.2rem] font-semibold ${
+            currentLocation.pathname === "/shop" ||
+            currentLocation.pathname === `/shop/${id}` ||
+            currentLocation.pathname === "/cart"
+              ? "hover:font-outline-2-b"
+              : "hover:font-outline-2"
+          } hover:font-outline-2`}
         >
           Home
         </Link>
         <Link
           to="/about"
-          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+          className={`text-[1.2rem] font-semibold ${
+            currentLocation.pathname === "/shop" ||
+            currentLocation.pathname === `/shop/${id}` ||
+            currentLocation.pathname === "/cart"
+              ? "hover:font-outline-2-b"
+              : "hover:font-outline-2"
+          } hover:font-outline-2`}
         >
           About
         </Link>
         <Link
           to="/contact"
-          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+          className={`text-[1.2rem] font-semibold ${
+            currentLocation.pathname === "/shop" ||
+            currentLocation.pathname === `/shop/${id}` ||
+            currentLocation.pathname === "/cart"
+              ? "hover:font-outline-2-b"
+              : "hover:font-outline-2"
+          } hover:font-outline-2`}
         >
           Contact
         </Link>
@@ -46,13 +64,25 @@ function MenuDesktop() {
       >
         <Link
           to={"/shop"}
-          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+          className={`text-[1.2rem] font-semibold ${
+            currentLocation.pathname === "/shop" ||
+            currentLocation.pathname === `/shop/${id}` ||
+            currentLocation.pathname === "/cart"
+              ? "hover:font-outline-2-b"
+              : "hover:font-outline-2"
+          } hover:font-outline-2`}
         >
           Shop Now
         </Link>
         <Link
           to={"/rent"}
-          className="text-[1.2rem] font-semibold hover:text-[#d3cecc]"
+          className={`text-[1.2rem] font-semibold ${
+            currentLocation.pathname === "/shop" ||
+            currentLocation.pathname === `/shop/${id}` ||
+            currentLocation.pathname === "/cart"
+              ? "hover:font-outline-2-b"
+              : "hover:font-outline-2"
+          } hover:font-outline-2`}
         >
           Rent Machine
         </Link>
