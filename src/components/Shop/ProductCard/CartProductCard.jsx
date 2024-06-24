@@ -15,7 +15,7 @@ function CartProductCard({
     <div id="cart-product-card">
       <div
         id="cart-product-card-container"
-        className="flex flex-row justify-center items-center m-5 p-5 bg-[#F7EADD] rounded-md"
+        className="flex flex-row justify-center items-center m-1 p-5 bg-[#F7EADD] rounded-md"
       >
         <div className="w-full flex flex-row justify-center items-center gap-10">
           <div id="cart-product-card-image" className="">

@@ -91,7 +91,7 @@ function ProductDetail() {
         className="flex w-full pt-20 gap-10 justify-center items-center"
       >
         <Link to="/shop">
-          <Buttons variant="secondary" label="Go Back"></Buttons>
+          <Buttons variant="secondary" label="← Go Back"></Buttons>
         </Link>
       </div>
     </div>
