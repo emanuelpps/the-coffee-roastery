@@ -1,16 +1,16 @@
 import { IoMdAddCircle } from "react-icons/io";
 import { IoIosRemoveCircle } from "react-icons/io";
 import { IoIosTrash } from "react-icons/io";
+import { FaStar } from "react-icons/fa";
+import { PiOrange } from "react-icons/pi";
 function CartProductCard({
   product,
   addToCart,
   removeFromCart,
   cart,
   reduceItemCart,
-  totalPriceForProduct
+  i,
 }) {
-
-  console.log(product);
   return (
     <div id="cart-product-card">
       <div
@@ -29,20 +29,27 @@ function CartProductCard({
             className="w-full flex justify-center items-center"
           >
             <div id="cart-product-card-title" className="flex w-full">
-              <h2>{product.name}</h2>
+              <h2 className="text-[1.5rem]">{product.name}</h2>
             </div>
-            <div id="cart-product-card-rating" className="flex w-full">
-              <h3>{product.rating}</h3>
+            <div id="cart-product-card-rating" className="flex flex-row w-full">
+              <h3 className="flex justify-center items-center gap-2">
+                Rating: <FaStar />
+                {product.rating}
+              </h3>
             </div>
             <div id="cart-product-card-type" className="flex w-full">
-              <h3>DARK</h3>
+              <h3>Roast: {product.roast}</h3>
             </div>
             <div
               id="cart-product-card-button-quantity"
               className="flex w-full gap-5 justify-center items-center"
             >
               <div id="cart-product-card-price" className="flex w-full">
-                <h2>${product.price * cart.filter((item) => item.id === product.id).length}</h2>
+                <h2 className="text-[1.3rem] font-bold">
+                  $
+                  {product.price *
+                    cart.filter((item) => item.id === product.id).length}
+                </h2>
               </div>
               <div id="cart-product-card-button-reduce">
                 <button
@@ -53,7 +60,7 @@ function CartProductCard({
                 </button>
               </div>
               <div id="cart-product-card-quantity">
-                <span className="bg-[#CFB190] p-4 rounded-md">
+                <span className="bg-[#CFB190] p-4 rounded-md bold">
                   {cart.filter((item) => item.id === product.id).length}
                 </span>
               </div>

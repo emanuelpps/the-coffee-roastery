@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useCartStore from "../../store/CartStore";
 import CartProductCard from "../../components/Shop/ProductCard/CartProductCard";
+import { FiRefreshCcw } from "react-icons/fi";
 
 function Cart() {
   const [newCart, setNewCart] = useState([]);
@@ -10,7 +11,7 @@ function Cart() {
     removeFromCart,
     addToCart,
     reduceItemCart,
-    totalPriceForProduct,
+    clearCart,
   } = useCartStore();
 
   useEffect(() => {
@@ -29,8 +30,11 @@ function Cart() {
       >
         {cart?.length > 0 ? (
           <>
-            <div id="cart-title" className="w-full pt-10 pb-4">
+            <div id="cart-title" className="w-full pt-10 pb-4 flex justify-between items-center">
               <h1 className="text-2xl">Your Cart:</h1>
+              <button className="rounded-full bg-[#473429] p-2" onClick={() => clearCart()}>
+                <FiRefreshCcw className="text-[#cfb190]"/>
+              </button>
             </div>
             <div
               id="cart-content"
@@ -46,12 +50,13 @@ function Cart() {
                     removeFromCart={removeFromCart}
                     addToCart={addToCart}
                     reduceItemCart={reduceItemCart}
-                    totalPriceForProduct={totalPriceForProduct}
+                    clearCart={clearCart}
                   />
                 ))}
             </div>
-            <div className="w-full flex justify-end">
-              <h3 className="text-2xl">Total Price: $ {totalPriceCart}</h3>
+            <div className="w-full flex justify-end gap-2 items-center">
+              <span className="text-2xl">Total Price: </span>{" "}
+              <h3 className="text-[1.8rem] font-bold"> ${totalPriceCart}</h3>
             </div>
           </>
         ) : (

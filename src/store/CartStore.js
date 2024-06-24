@@ -3,22 +3,30 @@ import { create } from "zustand";
 
 const useCartStore = create((set) => ({
   cart: [],
-  reduceItemCart: (id) =>
+  reduceItemCart: (productId) =>
     set((state) => {
-      const cartIndex = state.cart.indexOf(id);
-      return { cart: state.cart.slice(cartIndex) };
+      const newCart = [...state.cart];
+      const indexProd = newCart.findIndex((item) => item.id === productId);
+      if (indexProd !== -1) {
+        newCart.splice(indexProd, 1);
+      }
+      return { cart: newCart };
     }),
   addToCart: (item) => set((state) => ({ cart: [...state.cart, item] })),
   removeFromCart: (id) =>
-    set((state) => ({ cart:[...state.cart, state.cart.filter((item) => item.id !== id) ]})),
+    set((state) => ({ cart: state.cart.filter((item) => item.id !== id) })),
   clearCart: () => set({ cart: [] }),
   totalPriceForProduct: () => {
-      const filteredProducts = state.cart.find(
-        (product) => product.id == product.id
-      );
-      const totalPrice = filteredProducts.price * filteredProducts.length;
-      console.log("TOTAl",totalPrice);
-      return totalPrice;
-    },
+    const filteredProducts = state.cart.find(
+      (product) => product.id == product.id
+    );
+    const totalPrice = filteredProducts.price * filteredProducts.length;
+    console.log("TOTAl", totalPrice);
+    return totalPrice;
+  },
 }));
 export default useCartStore;
+/* 
+        const cartIndex = state.cart.find((item) => item.id === id).slice([0]);
+      console.log("cartINDEX", cartIndex);
+      return { cart: [...state.cart , cartIndex]}; */
