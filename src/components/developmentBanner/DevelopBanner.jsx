@@ -13,7 +13,7 @@ function DevelopBanner() {
       {showBanner && (
         <div className="w-full relative">
           <div className="flex w-full absolute justify-center items-center bg-black text-white">
-            <h2>WARNING! ⚠️ This site is under development 👷‍♂️🛠️</h2>
+            <h2>WARNING! ⚠️ This site is currently under development 👷‍♂️🛠️ - certain features may not function properly</h2>
           </div>
         </div>
       )}
