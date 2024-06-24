@@ -34,7 +34,7 @@ function CartWidget() {
           }  w-auto`}
         >
           <span className="w-full top-1 right-3">
-            {cart.length > 0 && cart.length}
+            {cart.length >= 1 && cart.length}
           </span>
         </div>
       </Link>

@@ -4,7 +4,19 @@ import CartProductCard from "../../components/Shop/ProductCard/CartProductCard";
 
 function Cart() {
   const [newCart, setNewCart] = useState([]);
-  const { cart, removeFromCart, addToCart } = useCartStore();
+  const [totalPriceCart, setTotalPriceCart] = useState();
+  const {
+    cart,
+    removeFromCart,
+    addToCart,
+    reduceItemCart,
+    totalPriceForProduct,
+  } = useCartStore();
+
+  useEffect(() => {
+    const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+    setTotalPriceCart(totalPrice.toFixed(2));
+  }, [cart.length]);
 
   return (
     <div
@@ -15,7 +27,7 @@ function Cart() {
         id="cart-container"
         className="flex flex-col justify-center items-center w-[80%] h-full"
       >
-        {cart.length > 0 ? (
+        {cart?.length > 0 ? (
           <>
             <div id="cart-title" className="w-full pt-10 pb-4">
               <h1 className="text-2xl">Your Cart:</h1>
@@ -33,8 +45,13 @@ function Cart() {
                     cart={cart}
                     removeFromCart={removeFromCart}
                     addToCart={addToCart}
+                    reduceItemCart={reduceItemCart}
+                    totalPriceForProduct={totalPriceForProduct}
                   />
                 ))}
+            </div>
+            <div className="w-full flex justify-end">
+              <h3 className="text-2xl">Total Price: $ {totalPriceCart}</h3>
             </div>
           </>
         ) : (

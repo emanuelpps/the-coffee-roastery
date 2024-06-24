@@ -1,7 +1,16 @@
 import { IoMdAddCircle } from "react-icons/io";
 import { IoIosRemoveCircle } from "react-icons/io";
 import { IoIosTrash } from "react-icons/io";
-function CartProductCard({ product, addToCart, removeFromCart, cart }) {
+function CartProductCard({
+  product,
+  addToCart,
+  removeFromCart,
+  cart,
+  reduceItemCart,
+  totalPriceForProduct
+}) {
+
+  console.log(product);
   return (
     <div id="cart-product-card">
       <div
@@ -33,12 +42,12 @@ function CartProductCard({ product, addToCart, removeFromCart, cart }) {
               className="flex w-full gap-5 justify-center items-center"
             >
               <div id="cart-product-card-price" className="flex w-full">
-                <h2>${product.price}</h2>
+                <h2>${product.price * cart.filter((item) => item.id === product.id).length}</h2>
               </div>
               <div id="cart-product-card-button-reduce">
                 <button
                   className="text-4xl"
-                  //onClick={() => removeFromCart(product.id)}
+                  onClick={() => reduceItemCart(product.id)}
                 >
                   <IoIosRemoveCircle />
                 </button>
