@@ -2,17 +2,14 @@ import React, { useEffect, useState } from "react";
 import useCartStore from "../../store/CartStore";
 import CartProductCard from "../../components/Shop/ProductCard/CartProductCard";
 import { FiRefreshCcw } from "react-icons/fi";
+import Buttons from "../../components/Buttons/Buttons";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 function Cart() {
   const [newCart, setNewCart] = useState([]);
   const [totalPriceCart, setTotalPriceCart] = useState();
-  const {
-    cart,
-    removeFromCart,
-    addToCart,
-    reduceItemCart,
-    clearCart,
-  } = useCartStore();
+  const { cart, removeFromCart, addToCart, reduceItemCart, clearCart } =
+    useCartStore();
 
   useEffect(() => {
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -22,7 +19,7 @@ function Cart() {
   return (
     <div
       id="cart"
-      className="bg-[#FFEBD6] flex min-h-[fit-content] h-[fit-content] w-[100%] justify-center items-center pt-32 text-[#473429] pb-40  font-playfair"
+      className="bg-[#FFEBD6] flex min-h-[fit-content] h-[fit-content] w-[100%] justify-center items-center pt-32 text-[#473429] pb-10  font-playfair"
     >
       <div
         id="cart-container"
@@ -30,10 +27,16 @@ function Cart() {
       >
         {cart?.length > 0 ? (
           <>
-            <div id="cart-title" className="w-full pt-10 pb-4 flex justify-between items-center">
+            <div
+              id="cart-title"
+              className="w-full pt-10 pb-4 flex justify-between items-center"
+            >
               <h1 className="text-2xl">Your Cart:</h1>
-              <button className="rounded-full bg-[#473429] p-2" onClick={() => clearCart()}>
-                <FiRefreshCcw className="text-[#cfb190]"/>
+              <button
+                className="rounded-full bg-[#473429] p-2"
+                onClick={() => clearCart()}
+              >
+                <FiRefreshCcw className="text-[#cfb190]" />
               </button>
             </div>
             <div
@@ -54,9 +57,14 @@ function Cart() {
                   />
                 ))}
             </div>
-            <div className="w-full flex justify-end gap-2 items-center">
+            <div className="w-full flex justify-end gap-2 items-center pt-4">
               <span className="text-2xl">Total Price: </span>{" "}
               <h3 className="text-[1.8rem] font-bold"> ${totalPriceCart}</h3>
+            </div>
+            <div className="w-full flex justify-end pt-5">
+              <Buttons variant="secondary" label="Checkout →">
+                {" "}
+              </Buttons>
             </div>
           </>
         ) : (
