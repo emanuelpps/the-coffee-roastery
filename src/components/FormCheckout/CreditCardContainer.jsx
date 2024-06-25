@@ -23,7 +23,16 @@ function CreditCardContainer() {
       <div id="credit-card-box">
         <div
           id="credit-card"
-          className="flex flex-col gap-8 bg-[#475ea5] w-[350px] pl-10 pr-10 rounded-xl h-[200px]"
+          className={`flex flex-col gap-8 ${
+            cardInformation.CardNumber?.startsWith("2") ||
+            cardInformation.CardNumber?.startsWith("5")
+              ? `bg-[#D4B36D]`
+              : cardInformation.CardNumber?.startsWith("4")
+              ? `bg-[#475ea5]`
+              : cardInformation.CardNumber?.startsWith("3")
+              ? `bg-[#9FA0A2]`
+              : `bg-[#475ea5]`
+          } w-[350px] pl-10 pr-10 rounded-xl h-[200px]`}
         >
           <div
             id="header-credit-card"

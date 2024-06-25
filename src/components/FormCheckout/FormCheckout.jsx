@@ -127,7 +127,7 @@ function FormCheckout() {
           </div>
         </div>
         <CreditCardContainer />
-        <div className="flex gap-20 pt-16">
+        <div className="flex w-full justify-center items-center gap-20 pt-16">
           <Buttons variant="secondary" label="Reset Information"></Buttons>
           <Buttons variant="secondary" label="Finish my Order"></Buttons>
         </div>
