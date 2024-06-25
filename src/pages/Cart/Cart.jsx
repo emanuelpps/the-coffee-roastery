@@ -4,6 +4,7 @@ import CartProductCard from "../../components/Shop/ProductCard/CartProductCard";
 import { FiRefreshCcw } from "react-icons/fi";
 import Buttons from "../../components/Buttons/Buttons";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const [newCart, setNewCart] = useState([]);
@@ -62,9 +63,9 @@ function Cart() {
               <h3 className="text-[1.8rem] font-bold"> ${totalPriceCart}</h3>
             </div>
             <div className="w-full flex justify-end pt-5">
-              <Buttons variant="secondary" label="Checkout →">
-                {" "}
-              </Buttons>
+              <Link to={"/checkout"}>
+                <Buttons variant="secondary" label="Checkout →"></Buttons>
+              </Link>
             </div>
           </>
         ) : (

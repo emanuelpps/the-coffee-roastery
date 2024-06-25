@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import Buttons from "../../Buttons/Buttons";
 import { Link } from "react-router-dom";
 import useCartStore from "../../../store/CartStore";
+import { PiShoppingCartDuotone } from "react-icons/pi";
 
 function ProductDetail() {
   const addToCart = useCartStore((state) => state.addToCart);
@@ -24,8 +25,14 @@ function ProductDetail() {
     addToCart(productsFiltered);
   };
 
-  console.log("filtered", productsFiltered);
-  console.log("cart", cart);
+  const toCart = () => {
+    return (
+      <div className="flex justify-center items-center gap-2">
+        <span>To Cart</span>
+        <PiShoppingCartDuotone />
+      </div>
+    );
+  };
 
   return (
     <div
@@ -92,6 +99,9 @@ function ProductDetail() {
       >
         <Link to="/shop">
           <Buttons variant="secondary" label="← Go Back"></Buttons>
+        </Link>
+        <Link to="/cart">
+          <Buttons variant="secondary" label={toCart()}></Buttons>
         </Link>
       </div>
     </div>

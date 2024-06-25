@@ -8,6 +8,7 @@ import Rent from "../pages/Rent/Rent";
 import ShopNow from "../pages/Shop/ShopNow";
 import ProductDetail from "../components/Shop/ProductDetail/ProductDetail";
 import Cart from "../pages/Cart/Cart";
+import Checkout from "../pages/Cart/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout/>,
         errorElement: <ErrorPage />,
       },
       {

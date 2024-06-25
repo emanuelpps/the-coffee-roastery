@@ -8,7 +8,8 @@ function Logo() {
   const fillColor =
     currentLocation.pathname === "/shop" ||
     currentLocation.pathname === `/shop/${id}` ||
-    currentLocation.pathname === "/cart"
+    currentLocation.pathname === "/cart" ||
+    currentLocation.pathname === "/checkout"
       ? "#473429"
       : "#FFEBD6";
   return (

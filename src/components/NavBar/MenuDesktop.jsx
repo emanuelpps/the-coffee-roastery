@@ -12,7 +12,8 @@ function MenuDesktop() {
       className={`bg-transparent w-full justify-center flex absolute ${
         currentLocation.pathname === "/shop" ||
         currentLocation.pathname === `/shop/${id}` ||
-        currentLocation.pathname === "/cart"
+        currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
           ? "text-[#473429]"
           : "text-[#FFEBD6]"
       } top-5`}
@@ -23,7 +24,8 @@ function MenuDesktop() {
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
-            currentLocation.pathname === "/cart"
+            currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
           } hover:font-outline-2`}
@@ -35,7 +37,8 @@ function MenuDesktop() {
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
-            currentLocation.pathname === "/cart"
+            currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
           } hover:font-outline-2`}
@@ -47,7 +50,8 @@ function MenuDesktop() {
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
-            currentLocation.pathname === "/cart"
+            currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
           } hover:font-outline-2`}
@@ -67,7 +71,8 @@ function MenuDesktop() {
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
-            currentLocation.pathname === "/cart"
+            currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
           } hover:font-outline-2`}
@@ -79,7 +84,8 @@ function MenuDesktop() {
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
-            currentLocation.pathname === "/cart"
+            currentLocation.pathname === "/cart"  ||
+            currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
           } hover:font-outline-2`}
