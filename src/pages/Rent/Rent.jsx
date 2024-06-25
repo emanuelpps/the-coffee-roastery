@@ -27,7 +27,7 @@ function Rent() {
         {machines.map((machine, index) => (
           <RentDetail key={index} machine={machine} setShowModal={setShowModal} />
         ))}
-        {showModal && <RentForm />}
+        {showModal && <RentForm setModalShow={setShowModal}/>}
       </div>
     </div>
   );

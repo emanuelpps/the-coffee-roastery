@@ -6,7 +6,7 @@ function ProductCard({ ...product }) {
   return (
     <div
       id="product-card"
-      className="text-[#473429] flex bg-[#F7EADD] justify-center items-center gap-10 border-2 border-[#473429] mt-10 rounded-md w-[350px]"
+      className="text-[#473429] flex bg-[#F7EADD] justify-center items-center gap-10 border-2 border-[#473429] mt-10 rounded-md w-[300px]"
     >
       <div id="product-card-container" className="flex flex-wrap">
         <div
@@ -26,10 +26,10 @@ function ProductCard({ ...product }) {
           <div id="product-card-description" className="flex flex-col gap-2">
             <div className="flex justify-between items-center gap-10 border-b-2 border-[#473429] pb-5">
               <div id="product-card-title" className="w-full flex-nowrap">
-                <h2 className="text-2xl w-[fit-content]">{product.name}</h2>
+                <h2 className="text-xl w-[fit-content]">{product.name}</h2>
               </div>
               <div id="product-card-price" className="">
-                <h3 className="text-[1.7rem] font-bold">${product.price}</h3>
+                <h3 className="text-[1.5rem] font-bold">${product.price}</h3>
               </div>
             </div>
             <div

@@ -1,14 +1,30 @@
 import React from "react";
 import Buttons from "../Buttons/Buttons";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
-function RentForm() {
+function RentForm({ setModalShow }) {
   return (
     <div
       id="rent-form"
-      className="flex justify-center items-center h-[400px] w-full"
+      className="flex justify-center items-center w-full relative text-[#473429]"
     >
-      <div id="rent-container" className="bg-white mx-auto bottom-[550px]">
-        <form className="w-full">
+      <div
+        id="rent-container"
+        className="absolute bg-[#FFEBD6] mx-auto bottom-[100px] rounded-md"
+      >
+        <div className="flex justify-end mt-5 mr-5">
+          <button onClick={() => setModalShow(false)}>
+            <IoMdCloseCircleOutline className="text-[1.2rem]" />
+          </button>
+        </div>
+        <form className="w-[600px] pl-10 pr-10 pb-10 flex flex-col gap-2">
+          <div className="w-full">
+            <h2 className="text-2xl">Rent your machine:</h2>
+            <p className="text-lg">
+              Complete the form, and our customer service agent will contact
+              you.
+            </p>
+          </div>
           <div className="mb-5">
             <label htmlFor="name" className="block mb-2 font-medium text-2xl">
               Name
@@ -38,11 +54,11 @@ function RentForm() {
               htmlFor="subject"
               className="block mb-2 font-medium text-2xl"
             >
-              Subject
+              Phone number
             </label>
             <input
-              type="subject"
-              id="subject"
+              type="number"
+              id="number"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] block w-full p-2.5"
               placeholder="About the coffee"
               required
