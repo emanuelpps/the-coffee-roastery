@@ -6,15 +6,17 @@ import { FaCcMastercard } from "react-icons/fa6";
 import Logo from "../Logo/Logo";
 
 function CreditCardContainer() {
-  const [cardInformation, setCardInformation] = useState({
-    Name: "",
-    Surname: "",
-    CardNumber: null,
-    ValidDate: null,
-    cvc: null,
-  });
+  const [cardInformation, setCardInformation] = useState([{
+    name: "",
+    surname: "",
+    cardNumber: "",
+    validDate: "",
+    cvc: "",
+  }]);
 
-  console.log(cardInformation.ValidDate);
+
+  
+  console.log(cardInformation);
   return (
     <div
       id="credit-card-container"
@@ -110,9 +112,9 @@ function CreditCardContainer() {
           </label>
           <input
             type="text"
-            id="city"
+            id="CardNumber"
             className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
-            placeholder="New York"
+            placeholder="4444 4444 4444 4444"
             required
             onChange={(e) => setCardInformation({ CardNumber: e.target.value })}
           />
@@ -126,7 +128,7 @@ function CreditCardContainer() {
           </label>
           <input
             type="text"
-            id="state"
+            id="Name"
             className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
             placeholder="AZ"
             required
@@ -142,7 +144,7 @@ function CreditCardContainer() {
           </label>
           <input
             type="text"
-            id="surname"
+            id="Surname"
             className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
             placeholder="AZ"
             required
@@ -161,6 +163,7 @@ function CreditCardContainer() {
             id="state"
             className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
             placeholder="DD/YYYY"
+            maxLength={5}
             required
             onChange={(e) => setCardInformation({ ValidDate: e.target.value })}
           />

@@ -41,7 +41,7 @@ function ProductDetail() {
     >
       <div
         id="product-detail-container"
-        className="flex  w-[90%] gap-20 bg-[#F7EADD] p-20 rounded-md border-[#473429] border-2"
+        className="flex  w-[80%] gap-20 bg-[#F7EADD] p-10 rounded-md border-[#473429] border-2"
       >
         <div
           id="product-detail-image"
