@@ -2,7 +2,26 @@ import React from "react";
 import Buttons from "../Buttons/Buttons";
 import CreditCardContainer from "./CreditCardContainer";
 
-function FormCheckout() {
+function FormCheckout({ ...props }) {
+  const handleReset = (e) => {
+    e.preventDefault()
+    props.setPaymentInformation({
+      name: "",
+      surname: "",
+      email: "",
+      phone: "",
+      address: "",
+      city: "",
+      state: "",
+      CardNumber: "",
+      CardName: "",
+      CardSurname: "",
+      CardValidDate: "",
+      Cardcvc: "",
+    });
+  };
+
+  console.log(props);
   return (
     <div
       id="cart-container"
@@ -29,6 +48,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
               placeholder="John Doe"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  name: e.target.value,
+                })
+              }
+              value={props.paymentInformation.name}
             />
           </div>
           <div className="w-full flex gap-10 items-center">
@@ -44,6 +70,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] max-w-[800px] p-2.5"
               placeholder="John Doe"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  surname: e.target.value,
+                })
+              }
+              value={props.paymentInformation.surname}
             />
           </div>
         </div>
@@ -61,6 +94,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
               placeholder="name@youremail.com"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  email: e.target.value,
+                })
+              }
+              value={props.paymentInformation.email}
             />
           </div>
           <div className="w-full flex gap-10 items-center">
@@ -76,6 +116,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
               placeholder="About the coffee"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  phone: e.target.value,
+                })
+              }
+              value={props.paymentInformation.phone}
             />
           </div>
         </div>
@@ -93,6 +140,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
               placeholder="Your Address"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  address: e.target.value,
+                })
+              }
+              value={props.paymentInformation.address}
             />
           </div>
           <div className="w-full flex gap-10 items-center">
@@ -108,6 +162,13 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
               placeholder="New York"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  city: e.target.value,
+                })
+              }
+              value={props.paymentInformation.city}
             />
           </div>
           <div className="w-full flex gap-10 items-center">
@@ -123,12 +184,23 @@ function FormCheckout() {
               className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
               placeholder="AZ"
               required
+              onChange={(e) =>
+                props.setPaymentInformation({
+                  ...props.paymentInformation,
+                  state: e.target.value,
+                })
+              }
+              value={props.paymentInformation.state}
             />
           </div>
         </div>
-        <CreditCardContainer />
+        <CreditCardContainer {...props} />
         <div className="flex w-full justify-center items-center gap-20 pt-16">
-          <Buttons variant="secondary" label="Reset Information"></Buttons>
+          <Buttons
+            variant="secondary"
+            label="Reset Information"
+            onClick={(e) => handleReset(e)}
+          ></Buttons>
           <Buttons variant="secondary" label="Finish my Order"></Buttons>
         </div>
       </form>

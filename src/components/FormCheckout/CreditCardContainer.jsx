@@ -5,7 +5,7 @@ import { SiAmericanexpress } from "react-icons/si";
 import { FaCcMastercard } from "react-icons/fa6";
 import Logo from "../Logo/Logo";
 
-function CreditCardContainer() {
+function CreditCardContainer({ ...props }) {
   const [cardTurn, setCardTurn] = useState(false);
   const [cardInformation, setCardInformation] = useState([
     {
@@ -17,22 +17,22 @@ function CreditCardContainer() {
     },
   ]);
 
-  console.log(cardInformation.ValidDate);
+  console.log(props.paymentInformation);
   return (
     <div
       id="credit-card-container"
-      className="w-[100%] flex justify-center items-center gap-20 mt-10" 
+      className="w-[100%] flex justify-center items-center gap-20 mt-10"
     >
       <div id="credit-card-box">
         <div
           id="credit-card"
           className={`flex flex-col gap-8 ${
-            cardInformation.CardNumber?.startsWith("2") ||
-            cardInformation.CardNumber?.startsWith("5")
+            props.paymentInformation.CardNumber?.startsWith("2") ||
+            props.paymentInformation.CardNumber?.startsWith("5")
               ? `bg-[#D4B36D]`
-              : cardInformation.CardNumber?.startsWith("4")
+              : props.paymentInformation.CardNumber?.startsWith("4")
               ? `bg-[#475ea5]`
-              : cardInformation.CardNumber?.startsWith("3")
+              : props.paymentInformation.CardNumber?.startsWith("3")
               ? `bg-[#9FA0A2]`
               : `bg-[#475ea5]`
           } w-[350px]  rounded-xl h-[200px]`}
@@ -45,7 +45,9 @@ function CreditCardContainer() {
               <div className="flex w-[100%] justify-center items-center ">
                 <div className="flex bg-slate-100 w-[80%] h-9 justify-end items-end">
                   <div className="flex text-md items-center mr-2 mb-1">
-                    {cardInformation.cvc ? cardInformation.cvc : "***"}
+                    {props.paymentInformation.Cardcvc
+                      ? props.paymentInformation.Cardcvc
+                      : "***"}
                   </div>
                 </div>
               </div>
@@ -63,35 +65,38 @@ function CreditCardContainer() {
                   id="credit-card-logo"
                   className="flex justify-center items-center h-14 min-h-14 "
                 >
-                  {cardInformation.CardNumber?.startsWith("2") ||
-                  cardInformation.CardNumber?.startsWith("5") ? (
+                  {props.paymentInformation.CardNumber?.startsWith("2") ||
+                  props.paymentInformation.CardNumber?.startsWith("5") ? (
                     <FaCcMastercard className="text-6xl text-white" />
-                  ) : cardInformation.CardNumber?.startsWith("4") ? (
+                  ) : props.paymentInformation.CardNumber?.startsWith("4") ? (
                     <RiVisaLine className="text-6xl text-white" />
-                  ) : cardInformation.CardNumber?.startsWith("3") ? (
+                  ) : props.paymentInformation.CardNumber?.startsWith("3") ? (
                     <SiAmericanexpress className="text-6xl text-white" />
                   ) : null}
                 </div>
               </div>
-              <div id="credit-card-number" className="flex gap-5  pr-5 pl-5 font-cardFont">
+              <div
+                id="credit-card-number"
+                className="flex gap-5  pr-5 pl-5 font-cardFont"
+              >
                 <div className="text-2xl">
-                  {cardInformation.CardNumber
-                    ? cardInformation.CardNumber.substring(0, 4)
+                  {props.paymentInformation.CardNumber
+                    ? props.paymentInformation.CardNumber.substring(0, 4)
                     : "****"}
                 </div>
                 <div className="text-2xl">
-                  {cardInformation.CardNumber
-                    ? cardInformation.CardNumber.substring(4, 8)
+                  {props.paymentInformation.CardNumber
+                    ? props.paymentInformation.CardNumber.substring(4, 8)
                     : "****"}
                 </div>
                 <div className="text-2xl">
-                  {cardInformation.CardNumber
-                    ? cardInformation.CardNumber.substring(8, 12)
+                  {props.paymentInformation.CardNumber
+                    ? props.paymentInformation.CardNumber.substring(8, 12)
                     : "****"}
                 </div>
                 <div className="text-2xl">
-                  {cardInformation.CardNumber
-                    ? cardInformation.CardNumber.substring(12, 16)
+                  {props.paymentInformation.CardNumber
+                    ? props.paymentInformation.CardNumber.substring(12, 16)
                     : "****"}
                 </div>
               </div>
@@ -101,22 +106,24 @@ function CreditCardContainer() {
               >
                 <div className="flex gap-5">
                   <span className="text-xl">
-                    {cardInformation.Name ? cardInformation.Name : "Name"}
+                    {props.paymentInformation.CardName
+                      ? props.paymentInformation.CardName
+                      : "Name"}
                   </span>
                   <span className="text-xl">
-                    {cardInformation.Surname
-                      ? cardInformation.Surname
+                    {props.paymentInformation.CardSurname
+                      ? props.paymentInformation.CardSurname
                       : "Surname"}
                   </span>
                 </div>
                 <div id="card-date">
                   <span className="flex text-xl items-center justify-center">
-                    {cardInformation.ValidDate
-                      ? cardInformation.ValidDate.substring(0, 2)
+                    {props.paymentInformation.CardValidDate
+                      ? props.paymentInformation.CardValidDate.substring(0, 2)
                       : "**"}
                     /
-                    {cardInformation.ValidDate
-                      ? cardInformation.ValidDate.substring(3, 5)
+                    {props.paymentInformation.CardValidDate
+                      ? props.paymentInformation.CardValidDate.substring(3, 5)
                       : "**"}
                   </span>
                 </div>
@@ -141,12 +148,13 @@ function CreditCardContainer() {
             maxLength={16}
             required
             onChange={(e) =>
-              setCardInformation({
-                ...cardInformation,
+              props.setPaymentInformation({
+                ...props.paymentInformation,
                 CardNumber: e.target.value,
               })
             }
             onFocus={() => setCardTurn(false)}
+            value={props.paymentInformation.CardNumber}
           />
         </div>
         <div className="w-full flex gap-10 items-center">
@@ -164,9 +172,13 @@ function CreditCardContainer() {
             required
             maxLength={10}
             onChange={(e) =>
-              setCardInformation({ ...cardInformation, Name: e.target.value })
+              props.setPaymentInformation({
+                ...props.paymentInformation,
+                CardName: e.target.value,
+              })
             }
             onFocus={() => setCardTurn(false)}
+            value={props.paymentInformation.CardName}
           />
         </div>
         <div className="w-full flex gap-10 items-center">
@@ -184,12 +196,13 @@ function CreditCardContainer() {
             maxLength={10}
             required
             onChange={(e) =>
-              setCardInformation({
-                ...cardInformation,
-                Surname: e.target.value,
+              props.setPaymentInformation({
+                ...props.paymentInformation,
+                CardSurname: e.target.value,
               })
             }
             onFocus={() => setCardTurn(false)}
+            value={props.paymentInformation.CardSurname}
           />
         </div>
         <div className="w-full flex gap-10 items-center">
@@ -201,18 +214,19 @@ function CreditCardContainer() {
           </label>
           <input
             type="text"
-            id="state"
+            id="valid-date"
             className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
-            placeholder="DD/YYYY"
+            placeholder="DD/YY"
             maxLength={5}
             required
             onChange={(e) =>
-              setCardInformation({
-                ...cardInformation,
-                ValidDate: e.target.value,
+              props.setPaymentInformation({
+                ...props.paymentInformation,
+                CardValidDate: e.target.value,
               })
             }
             onFocus={() => setCardTurn(false)}
+            value={props.paymentInformation.CardValidDate}
           />
         </div>
         <div className="w-full flex gap-10 items-center">
@@ -231,11 +245,12 @@ function CreditCardContainer() {
             maxLength={3}
             required
             onChange={(e) =>
-              setCardInformation({
-                ...cardInformation,
-                cvc: e.target.value,
+              props.setPaymentInformation({
+                ...props.paymentInformation,
+                Cardcvc: e.target.value,
               })
             }
+            value={props.paymentInformation.Cardcvc}
           />
         </div>
       </div>
