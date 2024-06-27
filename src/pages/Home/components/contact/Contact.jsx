@@ -2,7 +2,7 @@ import formImage from "../../../../assets/img/cafe.webp";
 import Buttons from "../../../../components/Buttons/Buttons";
 function Contact() {
   return (
-    <div className="bg-[#ffebd6] text-playfair h-full pb-20">
+    <div id="contact" className="bg-[#ffebd6] text-playfair h-full pb-20">
       <div className="flex justify-center items-center pt-20 text-[#473429] w-full">
         <div className="flex flex-col md:flex-row justify-center items-center w-[100%]">
           <div className="flex justify-center items-center w-[50%]">

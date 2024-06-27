@@ -1,10 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import { useParams } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function MenuDesktop() {
   const { id } = useParams();
   const currentLocation = useLocation();
+
+
+  
 
   return (
     <div
@@ -32,8 +36,8 @@ function MenuDesktop() {
         >
           Home
         </Link>
-        <Link
-          to="/about"
+        <HashLink
+           to="#about"
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
@@ -41,12 +45,12 @@ function MenuDesktop() {
             currentLocation.pathname === "/checkout"
               ? "hover:font-outline-2-b"
               : "hover:font-outline-2"
-          } hover:font-outline-2`}
+          } hover:font-outline-2`} smooth
         >
           About
-        </Link>
-        <Link
-          to="/contact"
+        </HashLink>
+        <HashLink
+          smooth to="#contact"
           className={`text-[1.2rem] font-semibold ${
             currentLocation.pathname === "/shop" ||
             currentLocation.pathname === `/shop/${id}` ||
@@ -57,7 +61,7 @@ function MenuDesktop() {
           } hover:font-outline-2`}
         >
           Contact
-        </Link>
+        </HashLink>
       </div>
       <div id="navbar-logo" className="flex h-[fit-content] w-[600px]">
         <Logo />
