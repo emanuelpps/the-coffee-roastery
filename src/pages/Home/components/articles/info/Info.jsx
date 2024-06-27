@@ -5,11 +5,12 @@ import coffeBeans from "../../../../../assets/img/coffe-beans.png";
 import coffeBeanTerciary from "../../../../../assets/img/coffe-bean-3.png";
 import coffeBeansSecondary from "../../../../../assets/img/coffe-beans-1.png";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
-function Info() {
+function Info({learnMoreRef}) {
   return (
     <div className="flex flex-col  md:w-[100%] md:max-w-[100%] bg-[#ffebd6] text-playfair h-auto pb-40  container-snap">
-      <div className="flex flex-col justify-center items-center gap-10 pt-20 ml-20 mr-20 text-[#473429]">
+      <div ref={learnMoreRef} className="flex flex-col justify-center items-center gap-10 pt-20 ml-20 mr-20 text-[#473429]">
         <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] mt-20 mb-10 relative">
           <img
             src={coffeBeanSecondary}

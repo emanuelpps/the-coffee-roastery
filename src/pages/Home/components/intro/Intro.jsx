@@ -1,6 +1,10 @@
 import Buttons from "../../../../components/Buttons/Buttons";
 
-function Intro() {
+function Intro({learnMoreRef}) {
+
+const handleScroll = () => {
+  learnMoreRef.current?.scrollIntoView({behavior: 'smooth'})
+}
   return (
     <div
       id="intro"
@@ -12,7 +16,7 @@ function Intro() {
         </h1>
       </div>
       <div className="mt-5">
-        <Buttons variant="primary" label="Learn More"></Buttons>
+        <Buttons variant="primary" label="Learn More" onClick={handleScroll}></Buttons>
       </div>
     </div>
   );

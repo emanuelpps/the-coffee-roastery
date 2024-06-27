@@ -6,13 +6,15 @@ import Info from "./components/articles/info/Info";
 import NewRelease from "./components/articles/new/NewRelease";
 import Contact from "./components/contact/Contact";
 import Intro from "./components/intro/Intro";
+import { useRef } from "react";
 
 function Home() {
+  const learnMoreRef = useRef(null);
   return (
     <div className="overflow-x-hidden font-playfair">
       <DevelopBanner />
-      <Intro />
-      <Info />
+      <Intro learnMoreRef={learnMoreRef} />
+      <Info learnMoreRef={learnMoreRef} />
       <FamilyRoasters />
       <NewRelease />
       <About />
