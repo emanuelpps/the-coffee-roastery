@@ -5,6 +5,7 @@ export default {
     fontFamily: {
       playfair: ["Playfair Display", "serif"],
       nunito: ["Nunito", "sans-serif"],
+      cardFont: ["Inconsolata", "monospace"]
     },
     extend: {
       backgroundImage: {
