@@ -6,7 +6,7 @@ function ProductCard({ ...product }) {
   return (
     <div
       id="product-card"
-      className="text-[#473429] flex bg-[#F7EADD] justify-center items-center gap-10 border-2 border-[#473429] mt-10 rounded-md w-[300px]"
+      className="text-[#473429] flex bg-[#F7EADD] justify-center items-center gap-10 border-2 border-[#473429] mt-10 rounded-md w-[350px]"
     >
       <div id="product-card-container" className="flex flex-wrap">
         <div
