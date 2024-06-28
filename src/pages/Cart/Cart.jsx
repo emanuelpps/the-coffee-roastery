@@ -69,8 +69,11 @@ function Cart() {
             </div>
           </>
         ) : (
-          <div className="h-screen flex justify-center mt-10">
+          <div className="h-[80vh] flex flex-col justify-center items-center gap-10">
             <p className="text-2xl">Your Cart is Empty...</p>
+            <Link to={"/shop"}>
+              <Buttons variant="secondary" label="← Go Back"></Buttons>
+            </Link>
           </div>
         )}
       </div>

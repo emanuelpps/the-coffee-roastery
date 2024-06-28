@@ -22,7 +22,7 @@ function Rent() {
     }
   ];
   return (
-    <div className="bg-[#473429] flex flex-col  min-h-[fit-content] h-[fit-content]  w-[100%] items-center pt-28 text-white pb-40  font-playfair">
+    <div className="bg-[#473429] flex flex-col  min-h-[fit-content] h-[fit-content] w-[100%] items-center pt-28 text-white pb-40  font-playfair">
       <div className="flex flex-col justify-center items-center w-[80%] md:w-[70%]">
         {machines.map((machine, index) => (
           <RentDetail key={index} machine={machine} setShowModal={setShowModal} />
