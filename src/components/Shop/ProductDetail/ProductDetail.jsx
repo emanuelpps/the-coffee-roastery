@@ -37,11 +37,11 @@ function ProductDetail() {
   return (
     <div
       id="product-detail"
-      className="flex flex-col justify-center items-center pt-40 bg-[#FFEBD6] w-[100%] m-auto overflow-x-hidden"
+      className="flex flex-col justify-center items-center pt-28 md:pt-40 bg-[#FFEBD6] w-[100%] m-auto overflow-x-hidden"
     >
       <div
         id="product-detail-container"
-        className="flex flex-col md:flex-row w-[80%] gap-20 bg-[#F7EADD] p-5 md:p-10 rounded-md border-[#473429] border-2"
+        className="flex flex-col md:flex-row w-[90%] md:w-[80%] gap-10 md:gap-20 bg-[#F7EADD] p-2 md:p-10 rounded-md border-[#473429] border-2"
       >
         <div
           id="product-detail-image"
@@ -49,15 +49,15 @@ function ProductDetail() {
         >
           <img
             src={productsFiltered.image}
-            className="h-[230px] md:w-[700px] md:h-[430px] border-solid rounded-xl border-4 border-[#473429]"
+            className="h-[220px] md:w-[700px] md:h-[430px] border-solid rounded-md border-4 border-[#473429]"
           />
         </div>
         <div
           id="product-detail-description"
-          className="flex flex-col md:w-[50%] gap-5 "
+          className="flex flex-col md:w-[50%] gap-2 md:gap-5"
         >
           <div className="flex flex-col md:flex-row justify-center items-center md:justify-between border-b-2 border-[#473429] pb-4">
-            <h3 className="text-3xl pb-2  ">{productsFiltered.name}</h3>
+            <h3 className="text-3xl pb-2">{productsFiltered.name}</h3>
             <div onClick={() => handleBuy(productsFiltered)}>
               <Buttons variant="secondary" label="Add To Cart +"></Buttons>
             </div>

@@ -14,11 +14,9 @@ function MenuMobile() {
   };
   return (
     <div className={`fixed top-0  bg-transparent w-full max-w-[100vw] z-50 `}>
-      <div
-        className={`flex justify-between p-2 bg-[#473429] `}
-      >
+      <div className={`flex justify-between p-2 bg-[#473429] `}>
         <div className="text-[#ffffff]">
-          <Logo/>
+          <Logo />
         </div>
         {isOpen ? (
           <div className="flex flex-col justify-center items-end relative  max-w-[380px] w-[360px]">
@@ -27,11 +25,21 @@ function MenuMobile() {
             </button>
             <div className="relative mr-32">
               <ul className="flex flex-col absolute text-[#ffebd6] font-nunito  justify-center items-center w-[140px] min-w-[fit-content] pt-5 pb-5 border-10 gap-5 bg-[#473429] rounded-md">
-                <Link to={"/"}>Home</Link>
-                <Link to={"/#about"}>About</Link>
-                <Link to={"/#contact"}>Contact</Link>
-                <Link to={"/shop"}>Shop Now</Link>
-                <Link to={"/rent"}>Rent Machine</Link>
+                <Link to={"/"} onClick={() => setIsOpen(false)}>
+                  Home
+                </Link>
+                <Link to={"/#about"} onClick={() => setIsOpen(false)}>
+                  About
+                </Link>
+                <Link to={"/#contact"} onClick={() => setIsOpen(false)}>
+                  Contact
+                </Link>
+                <Link to={"/shop"} onClick={() => setIsOpen(false)}>
+                  Shop Now
+                </Link>
+                <Link to={"/rent"} onClick={() => setIsOpen(false)}>
+                  Rent Machine
+                </Link>
               </ul>
             </div>
           </div>
