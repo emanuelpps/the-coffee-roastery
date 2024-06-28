@@ -11,7 +11,7 @@ function RentForm({ setModalShow }) {
     phone: "",
     message: "",
   });
-/* 
+  /* 
   const submitButtonText = () => {
     e.prevent.default
     Object.values(formInfo) ? setPending(true) : setPending(false);
@@ -40,7 +40,7 @@ function RentForm({ setModalShow }) {
             <IoMdCloseCircleOutline className="text-[1.2rem]" />
           </button>
         </div>
-        <form className="w-[600px] pl-10 pr-10 pb-10 flex flex-col gap-2">
+        <form className="md:w-[600px] pl-10 pr-10 pb-10 flex flex-col gap-2">
           <div className="w-full">
             <h2 className="text-2xl">Rent your machine:</h2>
             <p className="text-lg">

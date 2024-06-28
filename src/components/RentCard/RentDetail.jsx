@@ -7,7 +7,7 @@ function RentDetail({ machine, setShowModal }) {
   function handleShowModal() {
     console.log("hiciste click lcdm");
     setShowModal(true);
-  };
+  }
   return (
     <div id="rent-detail" className="bg-[#473429] pt-20">
       <div className="flex flex-col items-center">
@@ -20,7 +20,7 @@ function RentDetail({ machine, setShowModal }) {
               {machine?.title}
             </h2>
           </div>
-          <div id="rent-detail-content" className="flex gap-5">
+          <div id="rent-detail-content" className="flex flex-col md:flex-row gap-5">
             <div id="rent-detail-images">
               <div
                 id="rent-detail-image-selected"
@@ -55,7 +55,7 @@ function RentDetail({ machine, setShowModal }) {
             </div>
             <div
               id="rent-detail-description"
-              className="flex flex-col justify-center items-center w-[50%]"
+              className="flex flex-col justify-center items-center md:w-[50%]"
             >
               <div>
                 <p className="md:text-xl">{machine?.description}</p>
