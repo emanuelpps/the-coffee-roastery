@@ -34,8 +34,8 @@ function FormCheckout({ ...props }) {
             Please complete the form with your payment information.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10 md:gap-20">
-          <div className="justify-between flex  items-center">
+        <div className="flex w-full flex-col md:flex-row gap-10 md:gap-20">
+          <div className="w-full flex gap-10 items-center">
             <label
               htmlFor="name"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -45,7 +45,7 @@ function FormCheckout({ ...props }) {
             <input
               type="name"
               id="name"
-              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-56 p-2.5"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] md:w-full w-56 p-2.5"
               placeholder="John Doe"
               required
               onChange={(e) =>
@@ -67,7 +67,7 @@ function FormCheckout({ ...props }) {
             <input
               type="name"
               id="name"
-              className="flex justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 max-w-[800px] p-2.5"
+              className="flex justify-end items-end  md:w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 max-w-[800px] p-2.5"
               placeholder="John Doe"
               required
               onChange={(e) =>
@@ -81,7 +81,7 @@ function FormCheckout({ ...props }) {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-5">
-          <div className="justify-between  flex gap-10 items-center">
+          <div className="justify-between  md:w-full  flex gap-10 items-center">
             <label
               htmlFor="email"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -91,7 +91,7 @@ function FormCheckout({ ...props }) {
             <input
               type="email"
               id="email"
-              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-56 p-2.5"
+              className="flex  justify-end items-end  md:w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-56 p-2.5"
               placeholder="name@youremail.com"
               required
               onChange={(e) =>
@@ -103,7 +103,7 @@ function FormCheckout({ ...props }) {
               value={props.paymentInformation.email}
             />
           </div>
-          <div className="justify-between flex gap-10 items-center">
+          <div className="justify-between  md:w-full  flex gap-10 items-center">
             <label
               htmlFor="subject"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -113,7 +113,7 @@ function FormCheckout({ ...props }) {
             <input
               type="number"
               id="number"
-              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 p-2.5 ml-6"
+              className="flex  justify-end items-end  md:w-full  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 p-2.5 ml-6"
               placeholder="About the coffee"
               required
               onChange={(e) =>
@@ -200,12 +200,20 @@ function FormCheckout({ ...props }) {
             variant="secondary"
             label="Reset Information"
             onClick={(e) => handleReset(e)}
-            style={{ width: "150px", fontSize: "1rem" }}
+            style={
+              window.innerWidth <= 600
+                ? { width: "150px", fontSize: "1rem" }
+                : {}
+            }
           ></Buttons>
           <Buttons
             variant="secondary"
             label="Finish my Order"
-            style={{ width: "150px", fontSize: "1rem" }}
+            style={
+              window.innerWidth <= 600
+                ? { width: "150px", fontSize: "1rem" }
+                : {}
+            }
           ></Buttons>
         </div>
       </form>
