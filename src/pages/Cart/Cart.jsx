@@ -24,7 +24,7 @@ function Cart() {
     >
       <div
         id="cart-container"
-        className="flex flex-col justify-center items-center w-[80%] h-full"
+        className="flex flex-col justify-center items-center w-[90%] md:w-[80%] h-full"
       >
         {cart?.length > 0 ? (
           <>
