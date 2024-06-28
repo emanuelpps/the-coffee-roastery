@@ -12,6 +12,12 @@ function Logo() {
     currentLocation.pathname === "/checkout"
       ? "#473429"
       : "#FFEBD6";
+
+  const logoDimensions = {
+    width: "fit-content",
+    height: "40px",
+    marginLeft: "0px",
+  };
   return (
     <div className="flex flex-col gap-2 w-full justify-center items-center font-playfair">
       <div className="flex flex-col justify-center leading-none">

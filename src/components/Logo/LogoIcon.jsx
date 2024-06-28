@@ -9,7 +9,8 @@ function LogoIcon({ color }) {
       height="500pt"
       viewBox="0 0 500 500"
       preserveAspectRatio="xMidYMid meet"
-      style={{ width: "fit-content", height: "40px", marginLeft: "0px" }}
+      className="w-6 h-6 md:w-10 md:h-10"
+      //style={{ width: "fit-content", height: "40px", marginLeft: "0px" }}
     >
       <g
         transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"

@@ -3,6 +3,7 @@ import { PiCoffeeBeanBold } from "react-icons/pi";
 import { PiCoffeeBeanDuotone } from "react-icons/pi";
 import Logo from "../Logo/Logo";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function MenuMobile() {
   const currentLocation = useLocation();
@@ -12,21 +13,27 @@ function MenuMobile() {
     setIsOpen(!isOpen);
   };
   return (
-    <div className={`absolute bg-transparent w-full max-w-[350px]`}>
-      <div className={`flex justify-between p-2  ${currentLocation.pathname === "/shop" ? "text-[#473429]" : "text-white"}`}>
+    <div className={`absolute bg-transparent w-full max-w-[380px]`}>
+      <div
+        className={`flex justify-between p-2  ${
+          currentLocation.pathname === "/shop" ? "text-[#473429]" : "text-white"
+        }`}
+      >
         <div className="text-[#ffffff]">
           <Logo className="" />
         </div>
         {isOpen ? (
-          <div className="flex flex-col justify-center items-center relative">
+          <div className="flex flex-col justify-center items-end relative  max-w-[380px] w-[360px]">
             <button onClick={toggleMenu}>
               <PiCoffeeBeanDuotone className="text-[#ffebd6] text-[2rem]" />
             </button>
-            <div className="relative">
-              <ul className="flex flex-col right-8 text-[#ffebd6] font-nunito pt-2 absolute w-full  border-10 gap-5">
-                <li className="bg-[#473429]">Home</li>
+            <div className="relative mr-32">
+              <ul className="flex flex-col absolute text-[#ffebd6] font-nunito  justify-center items-center w-[140px] min-w-[fit-content] pt-5 pb-5 border-10 gap-5 bg-[#473429] rounded-md">
+                <li className="">Home</li>
                 <li>About</li>
                 <li>Contact</li>
+                <Link to={"/shop"}>Shop Now</Link>
+                <li>Rent Machine</li>
               </ul>
             </div>
           </div>
