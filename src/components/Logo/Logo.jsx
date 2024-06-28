@@ -6,11 +6,13 @@ function Logo() {
   const { id } = useParams();
   const currentLocation = useLocation();
   const fillColor =
-    currentLocation.pathname === "/shop" ||
-    currentLocation.pathname === `/shop/${id}` ||
-    currentLocation.pathname === "/cart" ||
-    currentLocation.pathname === "/checkout"
-      ? "#473429"
+    window.innerWidth > 600
+      ? currentLocation.pathname === "/shop" ||
+        currentLocation.pathname === `/shop/${id}` ||
+        currentLocation.pathname === "/cart" ||
+        currentLocation.pathname === "/checkout"
+        ? "#473429"
+        : "#FFEBD6"
       : "#FFEBD6";
 
   const logoDimensions = {
@@ -18,6 +20,8 @@ function Logo() {
     height: "40px",
     marginLeft: "0px",
   };
+
+  console.log(window.innerWidth);
   return (
     <div className="flex flex-col gap-2 w-full justify-center items-center font-playfair">
       <div className="flex flex-col justify-center leading-none">

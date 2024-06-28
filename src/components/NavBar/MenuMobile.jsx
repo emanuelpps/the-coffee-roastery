@@ -13,14 +13,12 @@ function MenuMobile() {
     setIsOpen(!isOpen);
   };
   return (
-    <div className={`absolute bg-transparent w-full max-w-[380px]`}>
+    <div className={`fixed top-0  bg-transparent w-full max-w-[100vw] z-50 `}>
       <div
-        className={`flex justify-between p-2  ${
-          currentLocation.pathname === "/shop" ? "text-[#473429]" : "text-white"
-        }`}
+        className={`flex justify-between p-2 bg-[#473429] `}
       >
         <div className="text-[#ffffff]">
-          <Logo className="" />
+          <Logo/>
         </div>
         {isOpen ? (
           <div className="flex flex-col justify-center items-end relative  max-w-[380px] w-[360px]">
@@ -29,11 +27,11 @@ function MenuMobile() {
             </button>
             <div className="relative mr-32">
               <ul className="flex flex-col absolute text-[#ffebd6] font-nunito  justify-center items-center w-[140px] min-w-[fit-content] pt-5 pb-5 border-10 gap-5 bg-[#473429] rounded-md">
-                <li className="">Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/#about"}>About</Link>
+                <Link to={"/#contact"}>Contact</Link>
                 <Link to={"/shop"}>Shop Now</Link>
-                <li>Rent Machine</li>
+                <Link to={"/rent"}>Rent Machine</Link>
               </ul>
             </div>
           </div>

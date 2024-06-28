@@ -21,7 +21,7 @@ function CreditCardContainer({ ...props }) {
   return (
     <div
       id="credit-card-container"
-      className="w-[100%] flex justify-center items-center gap-20 mt-10"
+      className="w-[100%] flex flex-col md:flex-row justify-center items-center gap-20 mt-10"
     >
       <div id="credit-card-box">
         <div

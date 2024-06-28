@@ -4,7 +4,7 @@ import CreditCardContainer from "./CreditCardContainer";
 
 function FormCheckout({ ...props }) {
   const handleReset = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     props.setPaymentInformation({
       name: "",
       surname: "",
@@ -25,7 +25,7 @@ function FormCheckout({ ...props }) {
   return (
     <div
       id="cart-container"
-      className="flex flex-col justify-center items-center w-[80%] h-full"
+      className="flex flex-col justify-center items-center w-[90%] md:w-[80%] h-full"
     >
       <form className="w-full flex flex-col gap-5">
         <div className="w-full">
@@ -34,8 +34,8 @@ function FormCheckout({ ...props }) {
             Please complete the form with your payment information.
           </p>
         </div>
-        <div className="flex gap-20">
-          <div className="w-full flex gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20">
+          <div className="justify-between flex  items-center">
             <label
               htmlFor="name"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -45,7 +45,7 @@ function FormCheckout({ ...props }) {
             <input
               type="name"
               id="name"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-56 p-2.5"
               placeholder="John Doe"
               required
               onChange={(e) =>
@@ -67,7 +67,7 @@ function FormCheckout({ ...props }) {
             <input
               type="name"
               id="name"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] max-w-[800px] p-2.5"
+              className="flex justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 max-w-[800px] p-2.5"
               placeholder="John Doe"
               required
               onChange={(e) =>
@@ -80,8 +80,8 @@ function FormCheckout({ ...props }) {
             />
           </div>
         </div>
-        <div className="flex gap-20">
-          <div className="w-full flex gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-5">
+          <div className="justify-between  flex gap-10 items-center">
             <label
               htmlFor="email"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -91,7 +91,7 @@ function FormCheckout({ ...props }) {
             <input
               type="email"
               id="email"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-56 p-2.5"
               placeholder="name@youremail.com"
               required
               onChange={(e) =>
@@ -103,7 +103,7 @@ function FormCheckout({ ...props }) {
               value={props.paymentInformation.email}
             />
           </div>
-          <div className="w-full flex gap-10 items-center">
+          <div className="justify-between flex gap-10 items-center">
             <label
               htmlFor="subject"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -113,7 +113,7 @@ function FormCheckout({ ...props }) {
             <input
               type="number"
               id="number"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 p-2.5 ml-6"
               placeholder="About the coffee"
               required
               onChange={(e) =>
@@ -126,8 +126,8 @@ function FormCheckout({ ...props }) {
             />
           </div>
         </div>
-        <div className="flex gap-20">
-          <div className="w-full flex gap-10 items-center">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20">
+          <div className="justify-between flex gap-10 items-center">
             <label
               htmlFor="email"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -137,7 +137,7 @@ function FormCheckout({ ...props }) {
             <input
               type="email"
               id="email"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-60 p-2.5"
               placeholder="Your Address"
               required
               onChange={(e) =>
@@ -149,7 +149,7 @@ function FormCheckout({ ...props }) {
               value={props.paymentInformation.address}
             />
           </div>
-          <div className="w-full flex gap-10 items-center">
+          <div className="justify-between  flex gap-10 items-center">
             <label
               htmlFor="subject"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -159,7 +159,7 @@ function FormCheckout({ ...props }) {
             <input
               type="text"
               id="city"
-              className="flex w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] p-2.5 ml-6"
+              className="flex  justify-end items-end bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#473429] focus:border-[#473429] w-[300px] p-2.5 ml-6"
               placeholder="New York"
               required
               onChange={(e) =>
@@ -171,7 +171,7 @@ function FormCheckout({ ...props }) {
               value={props.paymentInformation.city}
             />
           </div>
-          <div className="w-full flex gap-10 items-center">
+          <div className="justify-between flex gap-10 items-center">
             <label
               htmlFor="subject"
               className="flex mb-2 font-medium text-2xl justify-start"
@@ -195,13 +195,18 @@ function FormCheckout({ ...props }) {
           </div>
         </div>
         <CreditCardContainer {...props} />
-        <div className="flex w-full justify-center items-center gap-20 pt-16">
+        <div className="flex md:w-full justify-center items-center gap-20 pt-16">
           <Buttons
             variant="secondary"
             label="Reset Information"
             onClick={(e) => handleReset(e)}
+            style={{ width: "150px", fontSize: "1rem" }}
           ></Buttons>
-          <Buttons variant="secondary" label="Finish my Order"></Buttons>
+          <Buttons
+            variant="secondary"
+            label="Finish my Order"
+            style={{ width: "150px", fontSize: "1rem" }}
+          ></Buttons>
         </div>
       </form>
     </div>

@@ -6,8 +6,8 @@ const ButtonVariants = {
   tertiary: 'font-playfair border-2 border-[#ffebd6] p-3 pl-6 pr-6 text-2xl rounded-md',
 };
 
-const Buttons = ({ variant = 'primary', label, onClick }) => (
-  <button className={ButtonVariants[variant]} onClick={onClick}>
+const Buttons = ({ variant = 'primary', label, onClick, style}) => (
+  <button className={ButtonVariants[variant]} onClick={onClick} style={style}>
     {label}
   </button>
 );

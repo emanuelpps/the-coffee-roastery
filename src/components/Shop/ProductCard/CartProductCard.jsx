@@ -32,7 +32,7 @@ function CartProductCard({
               id="cart-product-card-title"
               className="flex min-w-[fit-content] md:w-full"
             >
-              <h2 className="text-[1.5rem]">{product.name}</h2>
+              <h2 className="text-[1.2rem] md:text-[1.5rem]">{product.name}</h2>
             </div>
             <div id="cart-product-card-rating" className="flex flex-row w-full">
               <h3 className="hidden md:flex justify-center items-center gap-2">
