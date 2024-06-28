@@ -22,10 +22,10 @@ function Footer() {
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-2xl text-center">The Coffe Roastery</h2>
             <hr className=" justify-center items-center max-auto h-px my-0 border-0 dark:bg-[#473429] w-[90%] mb-5" />
-            <NavLink to="#" className="text-xl text-center mb-2">
+            <NavLink to="/#about" className="text-xl text-center mb-2">
               About Us
             </NavLink>
-            <NavLink to="#" className="text-xl text-center mb-2">
+            <NavLink to="/#info" className="text-xl text-center mb-2">
               Our Coffee
             </NavLink>
           </div>

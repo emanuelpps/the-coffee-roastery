@@ -26,13 +26,13 @@ function CartProductCard({
           </div>
           <div
             id="cart-product-card-description"
-            className="w-full flex justify-center items-center"
+            className="w-full flex flex-col md:flex-row justify-center items-center"
           >
             <div
               id="cart-product-card-title"
-              className="flex min-w-[fit-content] md:w-full"
+              className="flex  min-w-[fit-content] md:w-full"
             >
-              <h2 className="text-[1.2rem] md:text-[1.5rem]">{product.name}</h2>
+              <h2 className="text-2xl md:text-[1.5rem]">{product.name}</h2>
             </div>
             <div id="cart-product-card-rating" className="flex flex-row w-full">
               <h3 className="hidden md:flex justify-center items-center gap-2">
@@ -51,7 +51,7 @@ function CartProductCard({
                 id="cart-product-card-price"
                 className="flex justify-center items-center w-full p-2 "
               >
-                <h2 className="text-[1.3rem] font-bold">
+                <h2 className="text-2xl md:text-[1.3rem] font-bold">
                   $
                   {product.price *
                     cart.filter((item) => item.id === product.id).length}
@@ -63,14 +63,14 @@ function CartProductCard({
                   className="flex justify-center items-center"
                 >
                   <button
-                    className="text-3xl"
+                    className="text-4xl"
                     onClick={() => reduceItemCart(product.id)}
                   >
                     <IoIosRemoveCircle />
                   </button>
                 </div>
                 <div id="cart-product-card-quantity">
-                  <span className="bg-[#CFB190] p-2 md:p-4 rounded-md bold">
+                  <span className="text-xl md:text-lg bg-[#CFB190] p-2 md:p-4 rounded-md bold">
                     {cart.filter((item) => item.id === product.id).length}
                   </span>
                 </div>
@@ -79,7 +79,7 @@ function CartProductCard({
                   className="flex justify-center items-center"
                 >
                   <button
-                    className="text-3xl"
+                    className="text-4xl"
                     onClick={() => addToCart(product)}
                   >
                     <IoMdAddCircle />
@@ -93,7 +93,7 @@ function CartProductCard({
                     className="hidden md:flex justify-center items-center text-xl"
                     onClick={() => removeFromCart(product.id)}
                   >
-                    <IoIosTrash className="text-[#863333]" />
+                    <IoIosTrash className="text-[#863333] text-2xl" />
                   </button>
                 </div>
               </div>
