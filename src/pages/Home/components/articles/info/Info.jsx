@@ -16,10 +16,10 @@ function Info({learnMoreRef}) {
             src={coffeBeanSecondary}
             className="hidden md:flex w-[50px] absolute right-[125%] top-[0%] rotate-[190deg]"
           />
-          <h2 className="font-[600] md:text-5xl pb-5">
+          <h2 className="font-[600] text-2xl md:text-5xl pb-5">
             Explore Our Collection
           </h2>
-          <p className="md:text-2xl text-center">
+          <p className="text-xl md:text-2xl text-center">
             Dive into our diverse range of coffee blends and single-origin
             selections. Each offering is a testament to our dedication to
             providing you with the best coffee experience possible. From smooth
@@ -56,8 +56,8 @@ function Info({learnMoreRef}) {
           className="hidden md:flex w-[10%] absolute left-[5%] top-[1%] rotate-[150deg] blur-[3px] z-50"
         />
         <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] h-[200px] z-0 ">
-          <h2 className="md:text-4xl pb-5">The Art of Roasting</h2>
-          <p className="md:text-xl z-50">
+          <h2 className="text-2xl md:text-4xl pb-5">The Art of Roasting</h2>
+          <p className="text-xl md:text-xl z-50">
             Roasting coffee is an art, and at The Coffee Roastery, we’ve
             perfected it. Our master roasters bring out the unique flavors and
             aromas hidden within each bean, crafting a symphony of tastes that
@@ -78,8 +78,8 @@ function Info({learnMoreRef}) {
           />
         </div>
         <div className="flex flex-col w-[330px] md:w-[500px] h-[200px] relative">
-          <h2 className="md:text-4xl pb-5">Freshness You Can Taste</h2>
-          <p className="md:text-xl z-50">
+          <h2 className="text-2xl md:text-4xl pb-5">Freshness You Can Taste</h2>
+          <p className="text-xl md:text-xl z-50">
             We roast our beans in small batches to maintain their freshness and
             deliver a product that’s second to none. Our commitment to quality
             means that you can enjoy the freshest coffee possible, bursting with
@@ -93,8 +93,8 @@ function Info({learnMoreRef}) {
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
         <div className="flex flex-col w-[330px] md:w-[500px] h-[200px]">
-          <h2 className="md:text-4xl pb-5">Brewed to Perfection</h2>
-          <p className="md:text-xl">
+          <h2 className="text-2xl md:text-4xl pb-5">Brewed to Perfection</h2>
+          <p className="text-xl md:text-xl">
             Whether you’re a seasoned barista or a coffee enthusiast, our beans
             are perfect for every brewing method. From the classic French press
             to the modern espresso machine, our coffee is designed to bring out
@@ -106,10 +106,10 @@ function Info({learnMoreRef}) {
           className="hidden md:flex w-[30px] absolute left-[70%] z-0 top-[115%] rotate-[250deg]"
         />
         <div className="flex flex-col w-[330px] md:w-[500px] h-[200px]">
-          <h2 className="md:text-4xl pb-5 z-50 text-pretty">
+          <h2 className="text-2xl md:text-4xl pb-5 z-50 text-pretty">
             A Coffee Experience
           </h2>
-          <p className="md:text-xl">
+          <p className="text-xl md:text-xl">
             At The Coffee Roastery, it’s not just about coffee – it’s about the
             experience. Join us in our cozy café where the rich aroma of freshly
             brewed coffee fills the air, or enjoy our expertly crafted blends

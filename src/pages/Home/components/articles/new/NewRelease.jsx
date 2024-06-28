@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function NewRelease() {
   const [showMore, setShowMore] = useState(false);
   return (
-    <div className="flex flex-col bg-[#ffebd6] pt-20 pb-20 overflow-hidden h-screen">
+    <div className="flex flex-col bg-[#ffebd6] pt-20 pb-20 overflow-hidden">
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div
           className="flex md:ml-20 relative"
@@ -16,7 +16,7 @@ function NewRelease() {
             id="new-release-image-border-2"
             className={`border-[#473429] border-4  ${showMore && "opacity-25"} rounded-xl`}
           >
-            <img src={newReleaseImg} className="w-[200px] md:w-[1000px] rounded-md" />
+            <img src={newReleaseImg} className="w-[350px] md:w-[1000px] rounded-md" />
           </div>
           {showMore && (
             <Link to="/shop/10" className="absolute w-40 h-32 m-auto left-0 right-0 top-10 bottom-0">
@@ -26,10 +26,10 @@ function NewRelease() {
         </div>
         <div className="w-[90%] md:w-full">
           <div className=" md:w-[80%] md:ml-20 ">
-            <h2 className="font-[400] md:text-5xl pt-10 pb-5 text-balance text-[#473429] ">
+            <h2 className="text-2xl font-[400] md:text-5xl pt-10 pb-5 text-balance text-[#473429] ">
               Introducing Our New Signature Blend:
             </h2>
-            <p className="md:text-xl text-start text-pretty text-[#473429]">
+            <p className="text-xl text-start text-pretty text-[#473429]">
               Discover the luxurious new blend from The Coffee Roastery:
               Viennese Coffee. This exquisite coffee combines the finest Arabica
               beans from Ethiopia and Colombia, delivering rich flavors of dark

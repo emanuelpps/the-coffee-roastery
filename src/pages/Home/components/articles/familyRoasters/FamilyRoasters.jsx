@@ -6,10 +6,10 @@ function FamilyRoasters() {
     <div className="flex justify-center items-center w-full h-screen bg-cover md:bg-center bg-bottom bg-no-repeat text-[#ffebd6] bg-background-family-roasters-mobile md:bg-background-family-roasters">
       <div className="flex flex-col md:pt-none justify-center items-start gap-10 md:p-20  w-[90%] md:w-full">
         <div className="flex flex-col text-start mt-40 md:mt-0 w-[100%] md:w-[50%]">
-          <h2 className="font-[400] text-2xl md:text-5xl md:pt-10 md:pb-5">
+          <h2 className="font-[400] text-2xl md:text-5xl md:pt-10 pb-5">
             Join the Coffee Roastery Family
           </h2>
-          <p className="md:text-xl">
+          <p className="text-xl">
             At The Coffee Roastery, we don&apos;t just brew coffee; we cultivate
             a community of passionate coffee enthusiasts. When you join our
             family, you become part of a tradition that values excellence,
