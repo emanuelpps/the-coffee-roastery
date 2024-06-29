@@ -55,7 +55,7 @@ function Info({learnMoreRef}) {
           src={coffeBeanTerciary}
           className="hidden md:flex w-[10%] absolute left-[5%] top-[1%] rotate-[150deg] blur-[3px] z-50"
         />
-        <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] h-[200px] z-0 ">
+        <div className="flex flex-col justify-center items-center w-[330px] md:w-[500px] h-[250px] md:h-[200px] z-0 ">
           <h2 className="text-2xl md:text-4xl pb-5">The Art of Roasting</h2>
           <p className="text-xl md:text-xl z-50">
             Roasting coffee is an art, and at The Coffee Roastery, we’ve
@@ -77,7 +77,7 @@ function Info({learnMoreRef}) {
             className="hidden md:flex w-[30%] absolute right-[90%] top-[85%]  rotate-[170deg] blur-[4px] z-50"
           />
         </div>
-        <div className="flex flex-col w-[330px] md:w-[500px] h-[200px] relative">
+        <div className="flex flex-col w-[330px] md:w-[500px] h-[250px] md:h-[200px] relative">
           <h2 className="text-2xl md:text-4xl pb-5">Freshness You Can Taste</h2>
           <p className="text-xl md:text-xl z-50">
             We roast our beans in small batches to maintain their freshness and
@@ -92,7 +92,7 @@ function Info({learnMoreRef}) {
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-20 pt-20 ml-20 mr-20 text-[#473429] text-center relative">
-        <div className="flex flex-col w-[330px] md:w-[500px] h-[200px]">
+        <div className="flex flex-col w-[330px] md:w-[500px] h-[250px] md:h-[200px] ">
           <h2 className="text-2xl md:text-4xl pb-5">Brewed to Perfection</h2>
           <p className="text-xl md:text-xl">
             Whether you’re a seasoned barista or a coffee enthusiast, our beans
